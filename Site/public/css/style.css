@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.container{
+margin: 0 aouto;
+padding: 0 2%;
+flex-wrap: wrap;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  background-color: #091B40;
+  border-bottom: 1px solid #35B276;
+  position: fixed;
+}
+
+.logo{
+  display: flex;
+  margin-right: 5rem;
+  margin-top: 8px;
+}
+
+.logo h1{
+  color:#E2DDDF;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.itens_menu ul{
+display: flex;
+margin-left: 10px;
+margin: top 15px;
+}
+
+.itens_menu li{
+  margin-right: 15px;
+  margin-right: 1rem;
+  margin-top: 8px;
+  display: flex;
+}
+
+.itens_menu li a{
+  color:#E2DDDF;
+  font-size: 15px;
+  text-decoration:none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.itens_menu li a:hover{
+text-decoration: dashed;
+color: #E2DDDF;
+}
+
+.banner {
+  width: 100;
+  height: 500px;
+  margin: top 0;
+  background-color: #091B40;
+}
+.banner img{
+  width: 30%;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: 15px;
+  margin-left: 1rem;
+}
+
+main{
+  width:100;
+  height: 300px;
+  padding-top: 2.5rem;
+  background-color: #091B40;
+}
+
+main section#sobre{
+  width: 100%;
+  height:400px;
+}
+
+main section#sobre h2{
+  color:#E2DDDF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  text-align: center;
+  bottom: unset;
+}
+
+main section#sobre button{
+  color:#091B40; 
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #35B276;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+main section#about p {
+margin: 1.5rem 6rem;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 18px;
+line-height: 25px;
+}
+
+section#edu_fin{
+  width: 100%;
+  background-color: #85EBD9;
+  margin: 2.5rem 0;
+  padding: 5rem;
+}
+
+section#edu_fin h2{
+  padding: 5rem 0;
+  text-align: center;
+  color:#091B40;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+section#edu_fin .cards{
+  display: flex;
+}
+
+section#edu_fin .cards .card_motivo{
+  margin-right: 30px;
+  background-color: #091B40;
+  padding: 2.5rem;
+}
+
+section#edu_fin .cards .card_motivo h2{
+  color: #35B276;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+section#edu_fin .cards .card_motivo p{
+  color: #E2DDDF;
+  margin: 1.5rem 6rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+footer{
+  width: 100%;
+  padding: 1.5rem;
+  bottom: 0;
+  position:fixed;
+  background-color: #091B40;
+}
+
+footer h4{
+  display: flex;
+  color: #E2DDDF;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+
