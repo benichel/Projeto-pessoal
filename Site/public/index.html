@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Bolsa de Valores</title>
+    <script src="../js/script.js"></script>
+    <script src="login.js"></script>
+    <script src="../js/cadastro.js"></script>
+  </head>
+  <body class="body">
+    <!-- cabeçalho (menu)-->
+    <header class="cabecalho">
+      <div class="nome_projeto">
+        <h1>Bolsa de Valores</h1>
+      </div>
+            <nav class="menu">
+              <ul>
+                <a class="inicio" href="#inicio">Início</a>
+                <a class="edu_fin" href="#edu_fin">Por que investir?</a>
+                <a class="sobre" href="#sobre">Sobre</a></li>
+                <a class="cadastro" href="../html/cadastro.html">Cadastro</a>
+                <a class="login" href="../html/login.html">Login</a>
+              </ul>
+            </nav>
+    </header>
+    <!-- tela inicial (frase + imagem)-->
+    <main class="conteudo">
+      <section class="banner">
+        <div class="descricao_banner">
+          <h2>DESCRIÇÃO SOBRE O MEU SITE LINDO</h2>
+          <br />
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+
+          <button onclick="edu_fin()">Agora</button>
+        </div>
+        <img class ="img_banner"src="./assets/icon/inco_inicio.png" alt="img inicio do site" />
+      </section>
+    
+    <!--tela sobre educaçao financeira-->
+      <section class="edu_fin">
+        <div class="edu_fin_texto">
+          <h2>Por que investir?</h2>
+          <br/>
+        </div>
+
+        <div class="cards">
+          <div class="primeiro_motivo">
+            <h2>Motivo 01</h2>
+            <br />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="segundo_motivo">
+            <h2>Motivo 02</h2>
+            <br />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="terceiro_motivo">
+            <h2>Motivo 03</h2>
+            <br />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+          <button onclick="simulador_de_investimento()">Simule aqui</button>
+        </div>
+      </section>
+   
+      <!-- pagina sobre -->
+      <section class="sobre_meu_perfil">
+        <div class="descricao_perfil">
+          <img src="../public/assets/icon/perfil.png" alt="meu perfil">
+          <h2>Sobre mim</h2><br>
+          <p>Me chamo Giovanna Benichel, 23 anos, estudante de ADS, criadora do site, bla bla bla</p>
+          <!-- meus dados e minha imagem -->
+        </div>
+        <div class="caracteristicas_perfil">
+          <!-- tres motivos do porque esse site me representa -->
+          <div class="primeira_caracteristica">
+            <h2>Motivo 01</h2>
+            <br />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="segunda_caracteristica">
+            <h2>Motivo 02</h2>
+            <br />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+
+          <div class="terceira_caracteristica">
+            <h2>Motivo 03</h2>
+            <br />
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+  </main>
+    <!-- rodapé da nossa página-->
+    <footer class="footer">
+      <h4>Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
+      <img class="img_footer_logo"src="..//public/assets/icon/incon.logo.png" alt="logo do meu site" />
+    </footer>
+  </body>
+</html>

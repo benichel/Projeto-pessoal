@@ -1,175 +1,377 @@
 *{
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
-  text-align: center;
+  text-decoration: none;
 }
 
-.container{
-margin: 0 aouto;
-padding: 0 2%;
-flex-wrap: wrap;
+body{
+  font-size: 100%;
+  background: #091B40;
+
 }
-
-header{
-  width: 100%;
-  height: 60px;
-  background-color: #091B40;
-  border-bottom: 1px solid #35B276;
-  position: fixed;
-}
-
-.logo{
-  display: flex;
-  margin-right: 5rem;
-  margin-top: 8px;
-}
-
-.logo h1{
-  color:#E2DDDF;
-  font-size: 30px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-}
-
-.itens_menu ul{
+.cabecalho{
 display: flex;
-margin-left: 10px;
-margin: top 15px;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+padding: 22px;
 }
 
-.itens_menu li{
-  margin-right: 15px;
-  margin-right: 1rem;
-  margin-top: 8px;
+.nome_projeto h1{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: #EEF8E9;
+font-size: 26px;
+}
+
+.menu{
+display: flex;
+gap: 50px;
+}
+
+.menu ul{
   display: flex;
+  gap: 20px;
 }
 
-.itens_menu li a{
-  color:#E2DDDF;
+.menu a{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: #85EBD9;
+font-weight: 400;
+font-size: 14px;
+}
+
+.menu a:hover{
+  color: #9688F2;  
+}
+
+/*final da minha navbar*/
+.conteudo{
+  margin-bottom: 1000px;
+  border-top: 0.14px solid #EEF8E9;
+}
+
+.banner{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.descricao_banner{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.descricao_banner h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #EEF8E9;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.descricao_banner p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #EEF8E9;
+  font-weight: 400;
   font-size: 15px;
-  text-decoration:none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
 }
 
-.itens_menu li a:hover{
-text-decoration: dashed;
-color: #E2DDDF;
-}
-
-.banner {
-  width: 100;
-  height: 500px;
-  margin: top 0;
-  background-color: #091B40;
-}
-.banner img{
-  width: 30%;
-  height: 300px;
-  margin-top: 100px;
-  margin-left: 15px;
-  margin-left: 1rem;
-}
-
-main{
-  width:100;
-  height: 300px;
-  padding-top: 2.5rem;
-  background-color: #091B40;
-}
-
-main section#sobre{
-  width: 100%;
-  height:400px;
-}
-
-main section#sobre h2{
-  color:#E2DDDF;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 25px;
-  text-align: center;
-  bottom: unset;
-}
-
-main section#sobre button{
-  color:#091B40; 
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #35B276;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-main section#about p {
-margin: 1.5rem 6rem;
-font-family: Arial, Helvetica, sans-serif;
-font-size: 18px;
-line-height: 25px;
-}
-
-section#edu_fin{
-  width: 100%;
+.descricao_banner button{
   background-color: #85EBD9;
-  margin: 2.5rem 0;
-  padding: 5rem;
-}
-
-section#edu_fin h2{
-  padding: 5rem 0;
-  text-align: center;
-  color:#091B40;
+  width: 180px;
+  height: 60px;
+  border:none;
+  box-shadow: 4px 5px 4px #04112B;
+  border-radius: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-section#edu_fin .cards{
-  display: flex;
-}
-
-section#edu_fin .cards .card_motivo{
-  margin-right: 30px;
-  background-color: #091B40;
-  padding: 2.5rem;
-}
-
-section#edu_fin .cards .card_motivo h2{
-  color: #35B276;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-section#edu_fin .cards .card_motivo p{
-  color: #E2DDDF;
-  margin: 1.5rem 6rem;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-}
-
-footer{
-  width: 100%;
-  padding: 1.5rem;
-  bottom: 0;
-  position:fixed;
-  background-color: #091B40;
-}
-
-footer h4{
-  display: flex;
-  color: #E2DDDF;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  justify-content: center;
+  color: #04112B;
+  font-weight: 400;
   font-size: 15px;
 }
 
+.descricao_banner button:hover{
+  background-color: #9688F2;
+}
 
+.img_banner{
+  display: flex;
+  padding: 30px;
+  height: 400px;
+}
+
+/*final da tela de inicio*/
+
+.edu_fin{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  
+}
+
+.edu_fin_texto{
+  border-top: 0.14px solid #9688F2;;
+  padding-top: 48px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #EEF8E9;
+  font-weight: 400;
+  font-size: 15px;
+  margin-bottom: 16px;
+  
+}
+
+.cards{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+margin: 10px;
+padding: 10px;
+box-sizing: border-box;
+}
+
+.primeiro_motivo{
+  display: flex;
+  justify-content: space-around;
+  background-color: #85EBD9;
+  flex-direction: column;
+  padding-left: 50px ;
+}
+
+.primeiro_motivo h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+}
+.primeiro_motivo p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.segundo_motivo{
+  display: flex;
+  justify-content: space-around;
+  background-color: #85EBD9;
+  font-weight: 400;
+  flex-direction: column;
+  padding-left: 50px ;
+}
+
+.segundo_motivo h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.segundo_motivo p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.terceiro_motivo{
+  display: flex;
+  justify-content: space-around;
+  background-color: #85EBD9;
+  flex-direction: column;
+  padding-left: 50px ;
+ 
+}
+
+.terceiro_motivo h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+}
+.terceiro_motivo p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+}
+
+.cards button{
+  background-color: #9688F2;
+  width: 180px;
+  height: 60px;
+  border:none;
+  box-shadow: 4px 5px 4px #04112B;
+  border-radius: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #04112B;
+  font-weight: 400;
+  font-size: 15px;
+}
+/*aqui termina sobre educação financeira*/
+.sobre_meu_perfil{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-around;
+  padding: 50px;
+  justify-content: space-around;
+}
+
+.descricao_perfil img{
+  display: flex;
+  padding: 30px;
+  height: 300px;
+}
+
+.descricao_perfil h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.descricao_perfil p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.caracteristicas_perfil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 50px;
+  background-color: #EEF8E9;
+  justify-content: space-around;
+}
+
+.primeira_caracteristica h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.primeira_caracteristica p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+.segunda_caracteristica h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.segunda_caracteristica p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.terceira_caracteristica h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.terceira_caracteristica p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 22px;
+  box-sizing: border-box;
+  background-color: #EEF8E9;
+}
+
+.footer{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+padding: 22px;
+border-top: 0.14px solid #9688F2;
+}
+.footer h4{
+  align-items: row;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+}
+
+.img_footer_logo{
+  align-items: center;
+  height: 150px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro</title>
+  </head>
+  <body>
+    <header>
+      <div class="imagem_cadeado">
+        <img class="imagem_cadeado_cadastro"
+          src="../public/assets/icon/icon_cadastro.png"
+          alt="imagem de cadeado"
+        />
+      </div>
+      <div class="tela_cadastro">
+        <section>
+          <div>
+            <h1>Cadastro</h1>
+          </div>
+          <div class="input_cadastro">
+            Nome <br /><input type="text" id="input_nome_cadastro" /><br />
+            E-mail <br /><input type="text" id="input_email_cadastro" /><br />
+            Celular <br /><input
+              type="number"
+              id="input_celular_cadastro"
+            /><br />
+            UF
+            <br /><select name="" id="select_uf">
+              <option value="sp">SP</option>
+              <option value="rj">RJ</option>
+              <option value="ba">BA</option>
+              <option value=""></option>
+              <option value=""></option>
+            </select>
+          </div>
+
+          <div class="input_cadastro">
+            Você investe?<br />
+            <select name="" id="select_investe">
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option></select
+            ><br />
+            Qual ação?<br />
+            <select name="" id="select_tipo_investimento">
+              <option value="tipo_01">tipo01</option>
+              <option value="tipo_02">tipo02</option>
+              <option value="tipo_03">tipo03</option>
+              <option value="tipo_04">tipo04</option>
+              <option value="tipo_05">tipo05</option></select
+            ><br />
+            Senha <br /><input type="password" id="input_senha" /><br />
+            Confirmar senha <br /><input
+              type="password"
+              id="input_confirmar_senha"
+            /><br />
+            <div class="button_cadastro">
+              <button onclick="cadastrar()">Cadastrar</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+  </body>
+</html>
