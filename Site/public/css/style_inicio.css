@@ -1,0 +1,55 @@
+.conteudo{
+    margin-bottom: 1000px;
+    border-top: 0.14px solid #EEF8E9;
+  }
+  
+  .banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .descricao_banner{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  
+  .descricao_banner h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EEF8E9;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  
+  .descricao_banner p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EEF8E9;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .descricao_banner button{
+    background-color: #85EBD9;
+    width: 180px;
+    height: 60px;
+    border:none;
+    box-shadow: 4px 5px 4px #04112B;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .descricao_banner button:hover{
+    background-color: #9688F2;
+  }
+  
+  .img_banner{
+    display: flex;
+    padding: 30px;
+    height: 400px;
+  }
+

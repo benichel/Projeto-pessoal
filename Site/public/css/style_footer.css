@@ -1,0 +1,20 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    border-top: 0.14px solid #9688F2;
+    }
+    .footer h4{
+      align-items: row;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: #5EC57E;
+      font-size: 15px;
+      gap: 20px;
+    }
+    
+    .img_footer_logo{
+      align-items: center;
+      height: 150px;
+    }

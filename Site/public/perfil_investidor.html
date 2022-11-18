@@ -6,72 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil do investidor</title>
   </head>
-  <body>
+  <body class="corpo_perfil_investidor">
     <header class="header">
       <div class="perfil_investidor">
-        <h1>Perfil do Investidor</h1>
-
+        <h1 class="titulo_investidor">Perfil do Investidor</h1>
+<!--parte 01 perfil do investidor com imagens-->
         <div class="tipos_perfil_investidor">
-          <section>
+          <section class="sessao_perfil_com_img">
             <div class="perfil_passivo">
-              <div>
+              <div class="local_imagem_passivo">
                 <img class="img_passivo"src="../public/assets/icon/icon_perfil01.png" alt="" />
               </div>
-              <h2>perfil passivo</h2>
+              <h2 class="titulo_perfil_passivo">perfil passivo</h2>
               <br/>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p class="pequena_descricao_passivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             </div>
 
             <div class="perfil_intermediario">
-              <div>
+              <div class="local_imagem_intermediario">
                 <img class="img_intermediario" src="../public/assets/icon/icon_perfil02.png" alt="" />
               </div>
-              <h2>Perfil intermediario</h2>
-              <br />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <h2 class="titulo_perfil_intermediario">Perfil intermediario</h2>
+              <br/>
+              <p class="pequena_descricao_intermediario">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             </div>
 
             <div class="perfil_arrojado">
-              <div>
+              <div class="local_imagem_arrojado">
                 <img class="img_arrojado" src="../public/assets/icon/icon_perfil03.png" alt="" />
               </div>
-              <h2>Perfil arrojado</h2>
-              <br />
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <h2 class="titulo_perfil_arrojado">Perfil arrojado</h2>
+              <br/>
+              <p class="perquena_descricao_arrojado">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
             </div>
           </section>
         </div>
-        <div class="perfil_descricao">
-          <h1>Perfil do Investidor</h1>
+
+        <!--parte 02 perfil do investidor com descrição e buttons-->
+      <section class="sessao_perfil_investidor_buttons">
+        <div class="titulo_perfil_descricao">
+          <h1 class="titulo">Perfil do Investidor</h1>
         </div>
-        <ul>
-          <li><a href="#inicio">voltar</a></li>
+        <ul class="link_voltar">
+          <li><a class="inicio" href="#inicio">voltar</a></li>
         </ul>
         <div class="perfil_textos">
           <div class="descricao_passivo">
-            <h3>Conservador</h3>
-            <br />
-            <p>Aquele com baixa tolerãncia ao risco. Prefere investimentos com menos volatilidade e retornos conhecidos como...</p>
-            <br />
+            <h3 class="titulo_passivo">Conservador</h3>
+            <br/>
+            <p class="texto_passivo">Aquele com baixa tolerãncia ao risco. Prefere investimentos com menos volatilidade e retornos conhecidos como...</p>
+            <br/>
             <button class="botao_passivo" onclick="direcionamento_perfil_padrao()">Sou esse</button>
           </div>
 
           <div class="descricao_intermediario">
-            <h3>Moderado</h3>
-            <br />
-            <p>O investudor que aceita correr algum risco com ativos, mas não aloca uma grande  parcela do seu patrimêncio em aplicações voláteis.</p>
-            <br />
+            <h3 class="titulo_intermediario">Moderado</h3>
+            <br/>
+            <p class="texto_intermediario">O investudor que aceita correr algum risco com ativos, mas não aloca uma grande  parcela do seu patrimêncio em aplicações voláteis.</p>
+            <br/>
             <button class="botao_intermediario" onclick="direcionamento_perfil_padrao()">Sou esse</button>
           </div>
 
           <div class="descricao_arrojado">
             <h3>Arrojado</h3>
-            <br />
-            <p></p>
-            <br />
+            <br/>
+            <p>Este perfil possui mais apetite por ativos mais arriscados e se dispõe a uma parcela ou a quase totalidade de seus investimentos neste tipo.</p>
+            <br/>
             <button class="botao_arrojado" onclick="direcionamento_arrojado()">Sou esse</button>
           </div>
         </div>
+      </section>
       </div>
     </header>
   </body>

@@ -1,0 +1,131 @@
+
+  .edu_fin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    
+  }
+  
+  .edu_fin_texto{
+    border-top: 0.14px solid #9688F2;;
+    padding-top: 48px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EEF8E9;
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 16px;
+    
+  }
+  
+  .cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  }
+  
+  .primeiro_motivo{
+    display: flex;
+    justify-content: space-around;
+    background-color: #85EBD9;
+    flex-direction: column;
+    padding-left: 50px ;
+  }
+  
+  .primeiro_motivo h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-size: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+  .primeiro_motivo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-size: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+  
+  .segundo_motivo{
+    display: flex;
+    justify-content: space-around;
+    background-color: #85EBD9;
+    font-weight: 400;
+    flex-direction: column;
+    padding-left: 50px ;
+  }
+  
+  .segundo_motivo h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-size: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+  
+  .segundo_motivo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-size: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+  
+  .terceiro_motivo{
+    display: flex;
+    justify-content: space-around;
+    background-color: #85EBD9;
+    flex-direction: column;
+    padding-left: 50px ;
+   
+  }
+  
+  .terceiro_motivo h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-size: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+  .terceiro_motivo p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-size: 15px;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    box-sizing: border-box;
+  }
+  
+  .cards button{
+    background-color: #9688F2;
+    width: 180px;
+    height: 60px;
+    border:none;
+    box-shadow: 4px 5px 4px #04112B;
+    border-radius: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #04112B;
+    font-weight: 400;
+    font-size: 15px;
+  }

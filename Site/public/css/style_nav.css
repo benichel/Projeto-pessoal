@@ -1,0 +1,34 @@
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 22px;
+    }
+    
+    .nome_projeto h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EEF8E9;
+    font-size: 26px;
+    }
+    
+    .menu{
+    display: flex;
+    gap: 50px;
+    }
+    
+    .menu ul{
+      display: flex;
+      gap: 20px;
+    }
+    
+    .menu a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #85EBD9;
+    font-weight: 400;
+    font-size: 14px;
+    }
+    
+    .menu a:hover{
+      color: #9688F2;  
+    }

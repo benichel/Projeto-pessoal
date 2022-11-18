@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulador</title>
-</head>
-<body>
-  <select id="select_historico">
-    <!-- no js que serão gerados os options de acordo com a qtd de registros/historico do usuário (métododo 'me trás os 10 primeiros'- no select - PI)-->
-    <option value=""></option>
-  </select>
-  Insira seu nome <br><input type="text" id="input_nome_usuario"><br>
-  Informe seu salário <br><input type="number" id="input_salario"><br>
-  Por quanto tempo (em ano) você quer investir? <br><input type="number" id="input_tempo_investido"><br>
-  Porcentagem do seu salário que quer investir <input type="number" id="input_porcentagem_investiu">
-  <button onclick="ver_resultado()">Ver Resultado</button>
-  <div id="resultado"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador</title>
+  </head>
+  <body class="corpo_calculadora">
+    <select class="" id="select_historico">
+      <!-- no js que serão gerados os options de acordo com a qtd de registros/historico do usuário (métododo 'me trás os 10 primeiros'- no select - PI)-->
+      <option value=""></option>
+    </select>
+    Insira seu nome <br /><input class="nome_calculadora" type="text" id="input_nome_usuario" /><br />
+    Informe seu salário <br /><input class="salario_calculadora" type="number" id="input_salario" /><br />
+    Por quanto tempo (em ano) você quer investir? <br/><input class="tempo_calculadora" type="number" id="input_tempo_investido"
+    /><br/>
+    Porcentagem do seu salário que quer investir
+    <input class="porcentagem_calculadora" type="number" id="input_porcentagem_investiu" />
+    <button class="button_calculadora" onclick="ver_resultado()">Ver Resultado</button>
+    <div id="resultado"></div>
+  </body>
 </html>
 
 <script>
-  function ver_resultado(){
+  function ver_resultado() {
     const nome = input_nome_usuario.value;
     var salario = Number(input_salario.value);
     var tempo_em_ano = Number(input_tempo_investido.value);
@@ -29,12 +31,13 @@
 
     var capital_investido = Number((salario * porcentagem_do_salario) / 100);
     const juros_composto = 0.07;
-//math é um ojbeto para fazer calculo no javascript junto com a função pow(eleva na potência = ,) você passa uma base. Expoente é o tempo em ano.
-    var rendimento_final = Number(capital_investido * Math.pow((1 + juros_composto), tempo_em_ano)).toFixed(2)
+    //math é um ojbeto para fazer calculo no javascript junto com a função pow(eleva na potência = ,) você passa uma base. Expoente é o tempo em ano.
+    var rendimento_final = Number(
+      capital_investido * Math.pow(1 + juros_composto, tempo_em_ano)
+    ).toFixed(2);
     // quantos ele teve em juros baseado no valor que rendeu (quanto esses 7% significam na moeda(real?))
-    var juros_rendido = Number(rendimento_final - capital_investido).toFixed(2) 
-    resultado.innerHTML = 
-    `Olá, ${nome}, seu resultado é sobre a taxa de 7%, o mesmo encontrado nos investimentos XPTO. 
+    var juros_rendido = Number(rendimento_final - capital_investido).toFixed(2);
+    resultado.innerHTML = `Olá, ${nome}, seu resultado é sobre a taxa de 7%, o mesmo encontrado nos investimentos XPTO. 
     Sendo assim, o seu dinheiro em ${tempo_em_ano} anos investido(s) renderá de juros R$${juros_rendido}, totalizando o valor de R$${rendimento_final} Após isso, <b>confira 
     qual o seu perfil do investidor</b> `;
   }
