@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro</title>
   </head>
+
   <body>
     <header>
       <div class="imagem_cadeado">
-        <img class="imagem_cadeado_cadastro"
+        <img
+          class="imagem_cadeado_cadastro"
           src="../public/assets/icon/icon_cadastro.png"
           alt="imagem de cadeado"
         />
@@ -20,14 +22,23 @@
             <h1>Cadastro</h1>
           </div>
           <div class="input_cadastro">
-            Nome <br /><input type="text" id="input_nome_cadastro" /><br />
-            E-mail <br /><input type="text" id="input_email_cadastro" /><br />
-            Celular <br /><input
+            Nome:<br /><input
+              class="nome_cadastro"
+              type="text"
+              id="input_nome_cadastro"
+            /><br />
+            E-mail: <br /><input
+              class="email_cadastro"
+              type="text"
+              id="input_email_cadastro"
+            /><br />
+            Celular: <br /><input
+              class="celular_cadastro"
               type="number"
               id="input_celular_cadastro"
             /><br />
-            UF
-            <br /><select name="" id="select_uf">
+            UF:<br />
+            <select class="select_uf" name="" id="select_uf">
               <option value="sp">SP</option>
               <option value="rj">RJ</option>
               <option value="ba">BA</option>
@@ -38,25 +49,38 @@
 
           <div class="input_cadastro">
             Você investe?<br />
-            <select name="" id="select_investe">
+            <select class="select_voce_investe" name="" id="select_investe">
               <option value="sim">Sim</option>
               <option value="nao">Não</option></select
             ><br />
+
             Em qual tipo?<br />
-            <select name="" id="select_tipo_investimento">
+            <select
+              class="select_tipo_investimento"
+              id="select_tipo_investimento"
+            >
               <option value="tesouro_direto">Tesouro Direto</option>
               <option value="cdb">CDB</option>
               <option value="lci_e_lca">LCI e LCA</option>
               <option value="açoes_de_empresas">Ações de empresas</option>
               <option value="fundos_de_invest">Fundos de Investimentos</option>
-              <option value="outros">Outros</option>
-              </select
-            ><br/>
-            Senha <br/><input type="password" id="input_senha" /><br/>
-            Confirmar senha <br/>
-            <input type="password" id="input_confirmar_senha"/><br/>
+              <option value="outros">Outros</option></select
+            ><br />
+
+            Senha <br /><input
+              class="senha_cadastro"
+              type="password"
+              id="input_senha"
+            /><br />
+            Confirmar senha <br />
+            <input
+              class="confirmar_senha_cadastro"
+              type="password"
+              id="input_confirmar_senha"
+            /><br />
+
             <div class="button_cadastro">
-              <button onclick="cadastrar()">Cadastrar</button>
+              <button class="button" onclick="cadastrar()">Cadastrar</button>
             </div>
           </div>
         </section>

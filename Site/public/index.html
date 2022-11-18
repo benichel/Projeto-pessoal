@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css"/>
     <title>Bolsa de Valores</title>
     <script src="../js/script.js"></script>
     <script src="login.js"></script>
@@ -29,79 +29,86 @@
     <!-- tela inicial (frase + imagem)-->
     <main class="conteudo">
       <section class="banner">
-        <div class="descricao_banner">
-          <h2>DESCRIÇÃO SOBRE O MEU SITE LINDO</h2>
-          <br />
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-
-          <button onclick="edu_fin()">Agora</button>
+       
+        <div class="conteudo_banner">
+          <h2 class="descricao_banner">DESCRIÇÃO SOBRE O MEU SITE LINDO</h2>
+          <br/>
+          <p class="texto_banner">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <button class = "botao_banner" onclick="botao_banner()">Agora</button>
         </div>
+
+        <div class="imagem_banner">
         <img class ="img_banner"src="./assets/icon/inco_inicio.png" alt="img inicio do site" />
+        </div>
       </section>
     
     <!--tela sobre educaçao financeira-->
       <section class="edu_fin">
         <div class="edu_fin_texto">
-          <h2>Por que investir?</h2>
+          <h2 class="titulo_pq_investir">Por que investir?</h2>
           <br/>
         </div>
 
         <div class="cards">
           <div class="primeiro_motivo">
-            <h2>Motivo 01</h2>
-            <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h2 class="topico_primeiro_motivo">Motivo 01</h2>
+            <br/>
+            <p class="texto_primeiro_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
           <div class="segundo_motivo">
-            <h2>Motivo 02</h2>
-            <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h2 class="topico_segundo_motivo">Motivo 02</h2>
+            <br/>
+            <p class="texto_segundo_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
           <div class="terceiro_motivo">
-            <h2>Motivo 03</h2>
-            <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h2 class="topico_terceiro_motivo">Motivo 03</h2>
+            <br/>
+            <p class="texto_terceiro_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
-          <button onclick="simulador_de_investimento()">Simule aqui</button>
-        </div>
+          <div class="botao_cards">
+          <button class ="botao_edu_fin"onclick="botao_edu_fin()">Simule aqui</button>
+          </div>
       </section>
    
       <!-- pagina sobre -->
       <section class="sobre_meu_perfil">
         <div class="descricao_perfil">
-          <img src="../public/assets/icon/perfil.png" alt="meu perfil">
-          <h2>Sobre mim</h2><br>
-          <p>Me chamo Giovanna Benichel, 23 anos, estudante de ADS, criadora do site, bla bla bla</p>
+          <img class="img_perfil" src="../public/assets/icon/perfil.png" alt="meu perfil">
+          <h2 class="sobre_mim">Sobre mim</h2><br>
+          <p class="texto_sobre_mim">Me chamo Giovanna Benichel, 23 anos, estudante de ADS, criadora do site, bla bla bla</p>
           <!-- meus dados e minha imagem -->
         </div>
+
         <div class="caracteristicas_perfil">
           <!-- tres motivos do porque esse site me representa -->
           <div class="primeira_caracteristica">
-            <h2>Motivo 01</h2>
+            <h2 class="primeiro_motivo">Motivo 01</h2>
             <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p class="texto_primeiro_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
           <div class="segunda_caracteristica">
-            <h2>Motivo 02</h2>
+            <h2 class="segundo_motivo">Motivo 02</h2>
             <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p class="texto_segundo_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
           <div class="terceira_caracteristica">
-            <h2>Motivo 03</h2>
-            <br />
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h2 class="terceiro_motivo">Motivo 03</h2>
+            <br/>
+            <p class="texto_terceiro_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
           </div>
         </div>
       </section>
   </main>
     <!-- rodapé da nossa página-->
     <footer class="footer">
-      <h4>Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
-      <img class="img_footer_logo"src="..//public/assets/icon/incon.logo.png" alt="logo do meu site" />
+      <h4 class="texto_footer">Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
+      <div class="imagem_footer">
+      <img class="img_logo"src="..//public/assets/icon/incon.logo.png" alt="logo do meu site" />
+      </div>
     </footer>
   </body>
 </html>
