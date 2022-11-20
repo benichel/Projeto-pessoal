@@ -7,16 +7,14 @@
 
 body {
   font-family: 'Dosis', sans-serif;
-  color: #091B40;
+  /*color: #091B40;*/
 }
 
 main{
-    margin-bottom: 1000px;
-    width: 100%;
-    padding-top: 2.5rem;
-    border-top: 0.14px solid #091B40;
-    background-color: #091B40;
-    background-size: cover;
+        /* margin-bottom: 1000px; */
+        width: 100%;
+        padding-top: 2.5rem;
+        border-top: 0.14px solid rgb(9, 27, 64);
 }
   
 .banner{
@@ -28,13 +26,13 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 9.5% 13% 3% 13%;
+    padding: 6% 13% 6% 13%;
 }
   .conteudo_banner{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 4vh 13vh;
+    padding: 2vh 10vh;
     background-color: #091B40;
     height: 52vh;
     width: 50%;
@@ -57,14 +55,15 @@ main{
   .botao_banner{
     background-color: #85EBD9;
     width: 180px;
-    height: 60px;
-    border:none;
+    height: 40px;
+    border: 30px;
     box-shadow: 4px 5px 4px #04112B;
     border-radius: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #04112B;
     font-weight: 400;
     font-size: 15px;
+    
   }
   
   .botao_banner:hover{
@@ -89,12 +88,11 @@ main{
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  width: 60%;
 }
 
 .titulo_investir{
   margin-top: 6vh;
-  width: 80%;
+
   font-size: 5vh;    
   font-weight: 700;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -106,7 +104,7 @@ main{
   font-weight: 600;
   color: #091B40;
   text-align: center;
-  margin-right: 28vh;
+  
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
@@ -114,30 +112,37 @@ main{
     width: 100%;
     background-color:#85EBD9;
     margin: 2.5rem 0;
-    padding: 5rem;
+    padding-left: 16rem;
+    padding-right: 16rem;
     display: flex;
-	  margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .primeiro_motivo, .segundo_motivo, .terceiro_motivo{
   width: 100%;
-    background-color: #5EC57E;
-    margin: 0rem 0;
-    padding: 6rem;
+  background-color: #85EBD9;
+  margin: 0rem 0;
+  padding: 4rem;
 }
 
-.topico_motivo h2{
+.topico_motivo {
   color: #091B40;
   line-height: 30px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 22px;
   font-weight: bold;
+  margin-right: 20px;
+  margin-left: 20px;
 }
-
+/*cuidar quando for escrever algo pq a passing vai comer o seu textinho*/
+/*se tiver com muita margin a caixa vai ficar muito pequena*/
 .texto_motivo {
-  margin-right: 30px;
-  background-color: #EEF8E9;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #5EC57E;
   padding: 2.5rem;
+  border-radius: 20px;
 }
 
 .texto_motivo p{
@@ -147,28 +152,40 @@ main{
   line-height: 30px;
 }
 
-.cards button{
-  background-color: #9688F2;
-  width: 180px;
-  height: 60px;
-  border:none;
+.botao_cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #85EBD9;
 }
-.cards .botao_edu_fin{
-  box-shadow: 4px 5px 4px #04112B;
+
+.edu_fin button{
+  background-color: #9688F2;
+  width: 160px;
+  height: 40px;
+  border:none;
+  margin-bottom: 6vh;
+}
+
+.botao_edu_fin{
+  box-shadow: 4px 5px 4px #5EC57E;
   border-radius: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #04112B;
+  color: #091B40;
   font-weight: 400;
   font-size: 15px;
 }
-*/
+
+.botao_edu_fin:hover{
+  background-color:#EEF8E9;
+}
+
 /*Perfil*/
 .sobre_meu_perfil{
   display: flex;
   flex-direction: row;
-  align-items: center;
+  /* align-items: center; */
   gap: 30px;
-  justify-content: space-around;
   padding: 50px;
   justify-content: space-around;
 }
@@ -177,6 +194,7 @@ main{
   display: flex;
   padding: 30px;
   height: 300px;
+  margin: auto;
 }
 
 .descricao_perfil h2{
@@ -186,9 +204,11 @@ main{
   gap: 20px;
   align-items: center;
   justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
+  padding: 20px;
+  
   background-color: #EEF8E9;
+  border-radius: 20px;
+  
 }
 
 .descricao_perfil p{
@@ -201,6 +221,7 @@ main{
   padding: 22px;
   box-sizing: border-box;
   background-color: #EEF8E9;
+  border-radius: 20px;
 }
 
 .caracteristicas_perfil{
@@ -290,20 +311,26 @@ footer{
   background-color: #091B40;
   background-size: cover;
   display: flex;
-  flex-direction: column;
-  flex-flow: column nowrap;
+  flex-direction: row;
   align-items: center;
-  
+  justify-content: center;
 }
 
 .texto_footer{
+  align-items: center;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   font-size: 2vh;
   padding-top: 2vh;
-  color: #EEF8E9;
+  color: #85EBD9;
   font-size: 2.3vh;
   padding-top: 1vh;
+}
+
+.imagem_footer{
+  display: flex;
+    padding: 30px;
+    height: 200px;
 }
 
 

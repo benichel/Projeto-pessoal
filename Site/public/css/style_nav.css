@@ -10,12 +10,12 @@ header {
 .linha-header {
   margin: 0;
   height: 4px;
-  background-color: #85EBD9;
+  background-color: #9688F2;
 }
 
 .header-bolsa_valores {
   display: flex;
-  width: 100%;
+
   margin: 0;
   padding: 15px 80px;
   flex-direction: row;
@@ -25,21 +25,16 @@ header {
 
 .logo_bolsa_valores p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #EEF8E9;
-    font-size: 26px;
-}
-
-.logo_bolsa_valores p{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #EEF8E9;
-    font-size: 26px;
+  color: #EEF8E9;
+  font-size: 26px;
 }
 
 nav {
   display: flex;
   margin: 0 5%;
-  width: 70%;
+  
   font-size: 20px;
+  
 }
 
 nav ul {
@@ -53,6 +48,7 @@ nav ul {
 
 nav ul li {
   justify-content: space-between;
+  list-style: none;
 }
 
 nav a {
@@ -72,7 +68,7 @@ nav a:hover {
 .login-cadastro {
   display: flex;
   flex-direction: row;
-  width: 10%;
+ 
   align-items: center;
   margin-left: 10vh;
   margin-right: 2vh;

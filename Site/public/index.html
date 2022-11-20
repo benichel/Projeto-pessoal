@@ -28,9 +28,13 @@
               </ul>
           </nav>
           <div class="login-cadastro">
-              <a href="./login.html" class="botao-cadastro">Login</a>
+            <nav>
+              <ul>
+                  <li><a href="./login.html" class="botao-login">Login</a></li>
+                  <li><a href="./cadastro.html" class="botao-cadastro">Cadastro</a></li>
+              </ul>
+            </nav>
           </div>
-          <a href="./cadastro.html" class="botao-login">Cadastro</a>
       </div>
       <div class="linha-header"></div>
   </header>
@@ -42,7 +46,7 @@
         <div class="conteudo_banner">
           <h2 class="descricao_banner">O que você deve saber sobre o mercado financeiro</h2>
           <br/>
-          <p class="texto_banner">Entenda como e por onde começar cuidar de suas finanças.</p>
+          <p class="texto_banner">Entenda como e por onde começar cuidar de suas finanças.</p><br>
           <button class = "botao_banner" onclick="botao_banner()">Agora</button>
         </div>
       
@@ -78,10 +82,9 @@
                 <br/>
                 <p class="texto_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
               </div>
-
-              <div class="botao_cards">
-                <button class ="botao_edu_fin"onclick="botao_edu_fin()">Simule aqui</button>
-              </div>
+        </div>
+        <div class="botao_cards">
+          <button class ="botao_edu_fin"onclick="botao_edu_fin()">Simule aqui</button>
         </div>
       </section>
    
@@ -118,12 +121,13 @@
   </main>
     <!-- rodapé da nossa página-->
     <footer class="footer">
-      <h4 class="texto_footer">Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
+      
       <div class="imagem_footer">
       <img class="img_logo"src="..//public/assets/icon/incon.logo.png" alt="logo do meu site" />
+      </div>
+      <h4 class="texto_footer">Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
       <div class="botão_direcionamento">
         <i class="fa-solid fa-arrow-up" id = "botao" onclick = "goTop()"></i>
-      </div>
       </div>
     </footer>
   </body>
