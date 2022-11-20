@@ -1,34 +1,107 @@
-.cabecalho{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 22px;
-    }
-    
-    .nome_projeto h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+/*navbar*/
+header {
+  position: fixed;
+  width: 100%;
+  padding-bottom: 0;
+  text-align: center;
+  background-color: #091B40;
+}
+.linha-header {
+  margin: 0;
+  height: 4px;
+  background-color: #85EBD9;
+}
+
+.header-bolsa_valores {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 15px 80px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_bolsa_valores p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #EEF8E9;
     font-size: 26px;
-    }
-    
-    .menu{
-    display: flex;
-    gap: 50px;
-    }
-    
-    .menu ul{
-      display: flex;
-      gap: 20px;
-    }
-    
-    .menu a{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #85EBD9;
-    font-weight: 400;
-    font-size: 14px;
-    }
-    
-    .menu a:hover{
-      color: #9688F2;  
-    }
+}
+
+.logo_bolsa_valores p{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #EEF8E9;
+    font-size: 26px;
+}
+
+nav {
+  display: flex;
+  margin: 0 5%;
+  width: 70%;
+  font-size: 20px;
+}
+
+nav ul {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #85EBD9;
+  font-weight: 400;
+  font-size: 14px;
+  gap: 20px;
+}
+
+nav ul li {
+  justify-content: space-between;
+}
+
+nav a {
+  display: flex;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #85EBD9;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+nav a:hover {
+  border-bottom: 4px solid #9688F2;
+  font-weight: bold;
+}
+
+.login-cadastro {
+  display: flex;
+  flex-direction: row;
+  width: 10%;
+  align-items: center;
+  margin-left: 10vh;
+  margin-right: 2vh;
+  cursor: pointer;
+}
+
+.botao-cadastro {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #85EBD9;
+  font-weight: 400;
+  font-size: 14px;
+}
+.botao-cadastro:hover {
+  border-bottom: 4px solid #9688F2;
+  font-weight: bold;
+}
+
+.botao-login{
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #85EBD9;
+  font-weight: 400;
+  font-size: 14px;
+}
+.botao-login:hover {
+  border-bottom: 4px solid #9688F2;
+  font-weight: bold;
+}
+.imagem_footer{
+  
+}

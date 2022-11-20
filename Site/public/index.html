@@ -5,71 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="./css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style_nav.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style_inicio.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/style"/>
     <title>Bolsa de Valores</title>
     <script src="../js/script.js"></script>
     <script src="login.js"></script>
     <script src="../js/cadastro.js"></script>
   </head>
-  <body class="body">
+  <body>
     <!-- cabeçalho (menu)-->
-    <header class="cabecalho">
-      <div class="nome_projeto">
-        <h1>Bolsa de Valores</h1>
-      </div>
-            <nav class="menu">
+    <header>
+      <div class="header-bolsa_valores">
+          <div class="logo_bolsa_valores">
+              <p class="logo_bolsa_valores">Bolsa de Valores</p>
+          </div>
+          <nav>
               <ul>
-                <a class="inicio" href="#inicio">Início</a>
-                <a class="edu_fin" href="#edu_fin">Por que investir?</a>
-                <a class="sobre" href="#sobre">Sobre</a></li>
-                <a class="cadastro" href="../html/cadastro.html">Cadastro</a>
-                <a class="login" href="../html/login.html">Login</a>
+                  <li><a href="./index.html">Início</a></li>
+                  <li><a href="./index.html">Educação Financeira</a></li>
+                  <li><a href="./index.html">Sobre mim</a></li>
               </ul>
-            </nav>
-    </header>
+          </nav>
+          <div class="login-cadastro">
+              <a href="./login.html" class="botao-cadastro">Login</a>
+          </div>
+          <a href="./cadastro.html" class="botao-login">Cadastro</a>
+      </div>
+      <div class="linha-header"></div>
+  </header>
     <!-- tela inicial (frase + imagem)-->
-    <main class="conteudo">
+    <main>
       <section class="banner">
-       
+        
+       <div class="principal_banner">
         <div class="conteudo_banner">
-          <h2 class="descricao_banner">DESCRIÇÃO SOBRE O MEU SITE LINDO</h2>
+          <h2 class="descricao_banner">O que você deve saber sobre o mercado financeiro</h2>
           <br/>
-          <p class="texto_banner">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          <p class="texto_banner">Entenda como e por onde começar cuidar de suas finanças.</p>
           <button class = "botao_banner" onclick="botao_banner()">Agora</button>
         </div>
-
+      
         <div class="imagem_banner">
         <img class ="img_banner"src="./assets/icon/inco_inicio.png" alt="img inicio do site" />
         </div>
+      </div>
       </section>
     
     <!--tela sobre educaçao financeira-->
       <section class="edu_fin">
-        <div class="edu_fin_texto">
-          <h2 class="titulo_pq_investir">Por que investir?</h2>
-          <br/>
+        <div class="texto_edu_fin">
+            <div class="titulo_investir">
+              <h2>Por que investir?</h2>
+            </div>
         </div>
 
-        <div class="cards">
-          <div class="primeiro_motivo">
-            <h2 class="topico_primeiro_motivo">Motivo 01</h2>
-            <br/>
-            <p class="texto_primeiro_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
+      <div class="cards">
+              <div class="primeiro_motivo">
+                <h2 class="topico_motivo">Motivo 01</h2>
+                <br/>
+                <p class="texto_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
 
-          <div class="segundo_motivo">
-            <h2 class="topico_segundo_motivo">Motivo 02</h2>
-            <br/>
-            <p class="texto_segundo_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
+              <div class="segundo_motivo">
+                <h2 class="topico_motivo">Motivo 02</h2>
+                <br/>
+                <p class="texto_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
 
-          <div class="terceiro_motivo">
-            <h2 class="topico_terceiro_motivo">Motivo 03</h2>
-            <br/>
-            <p class="texto_terceiro_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-          <div class="botao_cards">
-          <button class ="botao_edu_fin"onclick="botao_edu_fin()">Simule aqui</button>
-          </div>
+              <div class="terceiro_motivo">
+                <h2 class="topico_motivo">Motivo 03</h2>
+                <br/>
+                <p class="texto_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              </div>
+
+              <div class="botao_cards">
+                <button class ="botao_edu_fin"onclick="botao_edu_fin()">Simule aqui</button>
+              </div>
+        </div>
       </section>
    
       <!-- pagina sobre -->
@@ -108,6 +121,9 @@
       <h4 class="texto_footer">Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
       <div class="imagem_footer">
       <img class="img_logo"src="..//public/assets/icon/incon.logo.png" alt="logo do meu site" />
+      <div class="botão_direcionamento">
+        <i class="fa-solid fa-arrow-up" id = "botao" onclick = "goTop()"></i>
+      </div>
       </div>
     </footer>
   </body>
