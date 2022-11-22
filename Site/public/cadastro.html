@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="funcoes.js"></script>
+    <link rel="stylesheet" href="./css/style_cadastro.css" />
     <title>Cadastro</title>
   </head>
 
@@ -16,75 +18,229 @@
           alt="imagem de cadeado"
         />
       </div>
-      <div class="tela_cadastro">
-        <section>
-          <div>
-            <h1>Cadastro</h1>
-          </div>
-          <div class="input_cadastro">
-            Nome:<br /><input
-              class="nome_cadastro"
-              type="text"
-              id="input_nome_cadastro"
-            /><br />
-            E-mail: <br /><input
-              class="email_cadastro"
-              type="text"
-              id="input_email_cadastro"
-            /><br />
-            Celular: <br /><input
-              class="celular_cadastro"
-              type="number"
-              id="input_celular_cadastro"
-            /><br />
-            UF:<br />
-            <select class="select_uf" name="" id="select_uf">
-              <option value="sp">SP</option>
-              <option value="rj">RJ</option>
-              <option value="ba">BA</option>
-              <option value="sc">SC</option>
-              <option value="rs">RS</option>
-            </select>
-          </div>
-
-          <div class="input_cadastro">
-            Você investe?<br />
-            <select class="select_voce_investe" name="" id="select_investe">
-              <option value="sim">Sim</option>
-              <option value="nao">Não</option></select
-            ><br />
-
-            Em qual tipo?<br />
-            <select
-              class="select_tipo_investimento"
-              id="select_tipo_investimento"
-            >
-              <option value="tesouro_direto">Tesouro Direto</option>
-              <option value="cdb">CDB</option>
-              <option value="lci_e_lca">LCI e LCA</option>
-              <option value="açoes_de_empresas">Ações de empresas</option>
-              <option value="fundos_de_invest">Fundos de Investimentos</option>
-              <option value="outros">Outros</option></select
-            ><br />
-
-            Senha <br /><input
-              class="senha_cadastro"
-              type="password"
-              id="input_senha"
-            /><br />
-            Confirmar senha <br />
-            <input
-              class="confirmar_senha_cadastro"
-              type="password"
-              id="input_confirmar_senha"
-            /><br />
-
-            <div class="button_cadastro">
-              <button class="button" onclick="cadastrar()">Cadastrar</button>
-            </div>
-          </div>
-        </section>
+      <div class="container_nevegacao">
+        <a class="outros" href="./index.html">Voltar</a>
       </div>
     </header>
+    <section class="conteiner_cadastro">
+      <div class="titulo_cadastro">
+        <h1>Cadastro</h1>
+      </div>
+      <!--nome-->
+      <div class="input_nome">
+        <label for="input_nome">Nome</label>
+          <input onkeyup="verificar_nome()" type="text" id="vefificar_nome" placeholder="insira seu nome">
+        <br>
+      </div>
+      <!--email-->
+      <div class="input_email">
+        <div class="input_grupo">
+          <label for="input_email">E-mail</label>
+          <input onkeyup="verificar_email()" type="email" id="verificar_email" placeholder="exemplo@exemplo.com">
+      </div>
+      </div>
+      <!--celular-->
+      <div class="celular_cadastro">
+        <label for="input_num">Número</label>
+        <input onkeyup="verificar_num()" type="number" id="verificar_num" placeholder="Número da residência">
+      </div>
+      <!--uf-->
+      <div class="uf_select">
+        UF:<br />
+        <select class="select_uf" name="" id="select_uf">
+          <option value="sp">SP</option>
+          <option value="rj">RJ</option>
+          <option value="ba">BA</option>
+          <option value="sc">SC</option>
+          <option value="rs">RS</option>
+        </select>
+      </div>
+<!--parte 2-->
+      <!--você investe?-->
+      <div class="você investe_select">
+        Você investe?<br />
+        <select class="select_voce_investe" name="" id="select_investe">
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option></select
+        ><br />
+      </div>
+      <!--tipo-->
+      <div class="tipo_select">
+        Em qual tipo?<br />
+        <select class="select_tipo_investimento" id="select_tipo_investimento">
+          <option value="tesouro_direto">Tesouro Direto</option>
+          <option value="cdb">CDB</option>
+          <option value="lci_e_lca">LCI e LCA</option>
+          <option value="açoes_de_empresas">Ações de empresas</option>
+          <option value="fundos_de_invest">Fundos de Investimentos</option>
+          <option value="outros">Outros</option></select
+        ><br />
+      </div>
+      <!--senha-->
+      <div class="senha_cadastro">
+        <label for="input_senha">Senha</label>
+        <input onkeyup="verificar_senha()" type="password" id="verificar_senha" placeholder="no mínimo 8 caracteres">
+      </div>
+      <!--confirmar senha-->
+      <div class="confirmar_senha">
+        <label for="confirmacao_senha_input">Confirmar senha</label>
+        <input onkeyup="confirmar_senha()" type="password" id="input_senha_confirmacao" placeholder="Digite sua senha novamente">
+      </div>
+      <!--botão-->
+      <div class="button_cadastro">
+        <button class="button" onclick="cadastrar()">Cadastrar</button>
+      </div>
+    </section>
   </body>
 </html>
+
+<!--verificações-->
+<script>
+function verificar_nome() {
+        var nome = input_nome.value;
+        if (nome == "") {
+            document.getElementById("input_nome").style.borderColor = "black"
+        } else if (nome.length >= 3) {
+            document.getElementById("input_nome").style.borderColor = "green"
+        } else {document.getElementById("input_nome").style.borderColor = "red"}
+    }
+
+    function verificar_email(){
+        var email = input_email.value;
+
+        if (email == "") {
+            document.getElementById("input_email").style.borderColor = "black"
+        } else if (email.indexOf("@") > -1 && (email.indexOf("sptech.school") > -1 || email.indexOf(".com") > -1 || email.indexOf(".com.br") > -1)) {
+            document.getElementById("input_email").style.borderColor = "green";
+        } else {document.getElementById("input_email").style.borderColor = "red";}
+    }
+
+    function verificar_num() {
+        var num_Var = input_num.value;
+
+        if (num_Var == "") {
+            document.getElementById("input_num").style.borderColor = "black";
+        } else if (num_eVar.length > 1) {
+            document.getElementById("input_num").style.borderColor = "green";
+        } else {document.getElementById("input_num").style.borderColor = "red";}
+    }
+
+    function verificar_senha(){
+        var senha = input_senha.value;
+        confirmar_senha()
+
+        if (senha == "") {
+            document.getElementById("input_senha").style.borderColor = "black";
+        } else if (senha.length < 8) {
+            document.getElementById("input_senha").style.borderColor = "red";
+        } else {document.getElementById("input_senha").style.borderColor = "green";}
+    }
+
+    function confirmar_senha() {
+        var senha = input_senha.value;
+        var senha_confirm = input_senha_confirmacao.value;
+
+        if (senha_confirm == "") {
+            document.getElementById("input_senha_confirmacao").style.borderColor = "black";
+        } else if (senha == senha_confirm) {
+            document.getElementById("input_senha_confirmacao").style.borderColor = "green";
+        } else {document.getElementById("input_senha_confirmacao").style.borderColor = "red";}
+    }
+
+
+    function cadastrar() {
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var  nome = input_nome.value;
+        var  num = input_num.value;
+        
+        var  email = input_email.value;
+        var  senha = input_senha.value;
+        var  senha_confirm = input_senha_confirmacao.value;
+        var  estilo = select_estilo.value;
+
+        if (nome == "" || num == "" || email == "" || senha == "" || senha_confirm == "" || estilo == "") {
+            alert("Por favor, preencha todos os campos");
+        } else if (nome.length <= 3) {
+            alert("O nome deve ter mais de 2 caracteres!");
+        }  else if (num < 1) {
+            alert(`Verifique seu número`);
+        } else if (email.indexOf("@") == -1 || (email.indexOf("sptech.school") == -1 && email.indexOf(".com") == -1 && email.indexOf(".com.br") == -1)) {
+            alert("E-mail inválido!");
+        } else if (senha.length < 8) {
+            alert("A senha deve ter no mínimo 8 caracteres!");
+        } else if (senha != senha_confirm) {
+            alert(`Confirmação de senha incorreta!`);
+        } else {
+            // Enviando o valor da nova input
+            fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nome,
+                emailServer: email,
+                senhaServer: senha,
+                estiloServer: estilo
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                fetch("/usuarios/cadastrarE", {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                num_server: num,
+                cep_server: cep
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                setTimeout(() => {
+                    window.location = "login.html";
+                })
+                
+                
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            
+        });
+
+
+        return false;
+                
+                
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            
+        });
+
+
+        return false;
+        }
+
+        
+        
+ }
+</script>
+
+</html>
+
+
