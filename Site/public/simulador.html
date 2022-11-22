@@ -4,25 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/css/style_simulador.css">
     <title>Simulador</title>
   </head>
   <body class="corpo_calculadora">
-    <select class="" id="select_historico">
-      <!-- no js que serão gerados os options de acordo com a qtd de registros/historico do usuário (métododo 'me trás os 10 primeiros'- no select - PI)-->
+    <!--criação da tela de histórico como desejável-->
+    <!-- no js que serão gerados os options de acordo com a qtd de 
+      registros/historico do usuário (métododo 'me trás os 10 primeiros'- no select - PI)-->
+    <select class="" id="historico">
       <option value=""></option>
     </select>
-    Insira seu nome <br /><input class="nome_calculadora" type="text" id="input_nome_usuario" /><br />
-    Informe seu salário <br /><input class="salario_calculadora" type="number" id="input_salario" /><br />
-    Por quanto tempo (em ano) você quer investir? <br/><input class="tempo_calculadora" type="number" id="input_tempo_investido"
-    /><br/>
-    Porcentagem do seu salário que quer investir
-    <input class="porcentagem_calculadora" type="number" id="input_porcentagem_investiu" />
+    <div>
+      <!--salário-->
+      <div class="salario">
+        <label for="input_salario">Salário</label><br>
+          <input class= "input_salario" onkeyup="verificar_salario()" type="text" id="vefificar_salario" placeholder="informe o seu salário">
+        <br><br>
+      </div> 
+      <!--qtd de tempo em ano investir-->
+    <div class="qtd_tempo_ano">
+      <label for="input_qtd_tempo_ano">Quantidade de tempo (ano)</label><br>
+      <input class= "input_qtd_tempo_ano" onkeyup="verificar_qtd_tempo()" type="number" id="vefificar_qtd_tempo_ano" placeholder="informe o tempo de investimento">
+      <br><br>
+    </div>
+    <!--porcentagem do salário-->
+    <div class="porcentagem_salario">
+      <label for="input_porcentagem_salario">Em porcentagem, quantos deseja investir?</label><br>
+      <input class= "input_porcentagem_salario" onkeyup="verificar_porcentagem_salario()" type="text" id="vefificar_porcentagem_salario" placeholder="porcentagem de tempo">
+      <br><br>
+    </div>
+    <!--botão do simulador -->
     <button class="button_calculadora" onclick="ver_resultado()">Ver Resultado</button>
     <div id="resultado"></div>
   </body>
 </html>
 
 <script>
+  //verificações do simulador
+
+  //salario
+function verificar_salario() {
+        var salario = vefificar_salario.value;
+        if (salario == "") {
+            document.getElementById("vefificar_salario").style.borderColor = "black"
+        } else if (nome.length >= 1) {
+            document.getElementById("vefificar_salario").style.borderColor = "green"
+        } else {document.getElementById("vefificar_salario").style.borderColor = "red"}
+    }
+  //qtd_tempo
+    function verificar_qtd_tempo(){
+        var tempo_ano = vefificar_qtd_tempo_ano.value;
+        if (tempo_ano == "") {
+            document.getElementById("vefificar_qtd_tempo_ano").style.borderColor = "black"
+        } else if (tempo_ano.length >= 1) {
+            document.getElementById("vefificar_qtd_tempo_ano").style.borderColor = "green";
+        } else {document.getElementById("vefificar_qtd_tempo_ano").style.borderColor = "red";}
+    }
+    //porcentagem do salário
+    function verificar_porcentagem_salario() {
+        var qtd_tempo = input_qtd_tempo_ano.value;
+
+        if (num_Var == "") {
+            document.getElementById("input_num").style.borderColor = "black";
+        } else if (num_eVar.length > 1) {
+            document.getElementById("input_num").style.borderColor = "green";
+        } else {document.getElementById("input_num").style.borderColor = "red";}
+    }
+
+    function verificar_senha(){
+        var senha = input_senha.value;
+        confirmar_senha()
+
+        if (senha == "") {
+            document.getElementById("input_senha").style.borderColor = "black";
+        } else if (senha.length < 8) {
+            document.getElementById("input_senha").style.borderColor = "red";
+        } else {document.getElementById("input_senha").style.borderColor = "green";}
+    }
+
+    function confirmar_senha() {
+        var senha = input_senha.value;
+        var senha_confirm = input_senha_confirmacao.value;
+
+        if (senha_confirm == "") {
+            document.getElementById("input_senha_confirmacao").style.borderColor = "black";
+        } else if (senha == senha_confirm) {
+            document.getElementById("input_senha_confirmacao").style.borderColor = "green";
+        } else {document.getElementById("input_senha_confirmacao").style.borderColor = "red";}
+    }
+//script 
   function ver_resultado() {
     const nome = input_nome_usuario.value;
     var salario = Number(input_salario.value);
