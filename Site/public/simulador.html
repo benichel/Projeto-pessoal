@@ -18,19 +18,19 @@
       <!--salário-->
       <div class="salario">
         <label for="input_salario">Salário</label><br>
-          <input class= "input_salario" onkeyup="verificar_salario()" type="text" id="vefificar_salario" placeholder="informe o seu salário">
+          <input class= "input_salario" onkeyup="verificar_salario()" type="text" id="input_salario" placeholder="informe o seu salário">
         <br><br>
       </div> 
       <!--qtd de tempo em ano investir-->
     <div class="qtd_tempo_ano">
       <label for="input_qtd_tempo_ano">Quantidade de tempo (ano)</label><br>
-      <input class= "input_qtd_tempo_ano" onkeyup="verificar_qtd_tempo()" type="number" id="vefificar_qtd_tempo_ano" placeholder="informe o tempo de investimento">
+      <input class= "input_qtd_tempo_ano" onkeyup="verificar_qtd_tempo()" type="number" id="input_qtd_tempo_ano" placeholder="informe o tempo de investimento">
       <br><br>
     </div>
     <!--porcentagem do salário-->
     <div class="porcentagem_salario">
       <label for="input_porcentagem_salario">Em porcentagem, quantos deseja investir?</label><br>
-      <input class= "input_porcentagem_salario" onkeyup="verificar_porcentagem_salario()" type="text" id="vefificar_porcentagem_salario" placeholder="porcentagem de tempo">
+      <input class= "input_porcentagem_salario" onkeyup="verificar_porcentagem_salario()" type="text" id="input_porcentagem_salario" placeholder="porcentagem de tempo">
       <br><br>
     </div>
     <!--botão do simulador -->
@@ -44,31 +44,31 @@
 
   //salario
 function verificar_salario() {
-        var salario = vefificar_salario.value;
+        var salario = input_salario.value;
         if (salario == "") {
-            document.getElementById("vefificar_salario").style.borderColor = "black"
+            document.getElementById("input_salario").style.borderColor = "black"
         } else if (nome.length >= 1) {
-            document.getElementById("vefificar_salario").style.borderColor = "green"
-        } else {document.getElementById("vefificar_salario").style.borderColor = "red"}
+            document.getElementById("input_salario").style.borderColor = "green"
+        } else {document.getElementById("input_salario").style.borderColor = "red"}
     }
   //qtd_tempo
     function verificar_qtd_tempo(){
-        var tempo_ano = vefificar_qtd_tempo_ano.value;
+        var tempo_ano = input_qtd_tempo_ano.value;
         if (tempo_ano == "") {
-            document.getElementById("vefificar_qtd_tempo_ano").style.borderColor = "black"
+            document.getElementById("input_qtd_tempo_ano").style.borderColor = "black"
         } else if (tempo_ano.length >= 1) {
-            document.getElementById("vefificar_qtd_tempo_ano").style.borderColor = "green";
-        } else {document.getElementById("vefificar_qtd_tempo_ano").style.borderColor = "red";}
+            document.getElementById("input_qtd_tempo_ano").style.borderColor = "green";
+        } else {document.getElementById("input_qtd_tempo_ano").style.borderColor = "red";}
     }
     //porcentagem do salário
     function verificar_porcentagem_salario() {
-        var qtd_tempo = input_qtd_tempo_ano.value;
+        var porcentagem_salario = input_porcentagem_salario.value;
 
         if (num_Var == "") {
-            document.getElementById("input_num").style.borderColor = "black";
+            document.getElementById("input_porcentagem_salario").style.borderColor = "black";
         } else if (num_eVar.length > 1) {
-            document.getElementById("input_num").style.borderColor = "green";
-        } else {document.getElementById("input_num").style.borderColor = "red";}
+            document.getElementById("input_porcentagem_salario").style.borderColor = "green";
+        } else {document.getElementById("input_porcentagem_salario").style.borderColor = "red";}
     }
 
     function verificar_senha(){
