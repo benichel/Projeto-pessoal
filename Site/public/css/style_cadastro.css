@@ -1,3 +1,148 @@
-*{
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border: none;
 }
+body{
+
+    font-family: 'Dosis', sans-serif;
+    /*color: #091B40;*/
+    padding-top: 20px ;
+}
+
+
+header {
+    position: fixed;
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+    background-color: #ffffff;
+  }
+
+.header_menu{
+    display: flex;
+    margin: 0 5%;
+    
+    font-size: 20px
+  }
+.voltar{
+    display: flex;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #344D67;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.voltar a{
+    border-bottom: 4px solid #9688F2;
+    font-weight: bold;
+}
+
+.linha-header {
+    margin: 0;
+    height: 4px;
+    background-color: #222222;
+  }
+
+/*termina o menu*/
+main{
+    /* margin-bottom: 1000px; */
+    width: 100%;
+    padding-top: 2.5rem;
+    border-top: 0.14px solid rgb(9, 27, 64);  
+}
+._banner{
+    background-color: #ffffff;
+    background-size: cover;
+}
+
+.principal_banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6% 13% 6% 13%;
+}
+.imagem_cadeado_cadastro img{
+    display: flex;
+    padding: 30px;
+    height: 400px;
+}
+
+.div_inputs{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.titulo_cadastro h1{
+    color: #03FA6E;
+    text-decoration: underline;
+}
+
+.lado_a, .lado_b{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.input_nome, .input_email, .input_num, .uf_select{
+    margin-bottom: 30px;
+    padding: 10px;
+    /* border-bottom: 2px solid; */
+    text-align: center;
+    /* outline: none; */
+    width: 100%;
+    justify-content: center;   
+} 
+
+label, input{
+
+}
+
+.select_uf{
+
+}
+
+.investe_select, .tipo_select, .senha_cadastro, .confirmar_senha{
+    margin-bottom: 30px;
+    padding: 10px;
+    border-bottom: 2px solid;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    justify-content: center; 
+} 
+
+.select_voce_investe{
+
+}
+.select_tipo_investimento{
+
+}
+
+.button_cadastro{
+    background-color: #344D67;
+    height: 40px;
+    width: 140px;    
+}
+
+.button button{
+    cursor: pointer;
+    color: #344D67;
+    background-color: #03FA6E;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;    
+}
+
+/*.select_grupo select{
+    border: 2px solid black;
+}*/
+

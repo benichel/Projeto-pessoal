@@ -11,14 +11,14 @@ body {
 }
 
 main{
-        /* margin-bottom: 1000px; */
-        width: 100%;
-        padding-top: 2.5rem;
-        border-top: 0.14px solid rgb(9, 27, 64);
+  /* margin-bottom: 1000px; */
+  width: 100%;
+  padding-top: 2.5rem;
+  border-top: 0.14px solid rgb(9, 27, 64);
 }
   
 .banner{
-    background-color: #091B40;
+    background-color: #ffffff;
     background-size: cover;
 }
 
@@ -33,7 +33,7 @@ main{
     flex-direction: column;
     justify-content: center;
     padding: 2vh 10vh;
-    background-color: #091B40;
+    background-color: #ffffff;
     height: 52vh;
     width: 50%;
   }
@@ -42,18 +42,18 @@ main{
     font-size: 40px;
     font-weight: 800;
     margin-bottom: 1.5vh;
-    color: #EEF8E9;
+    color: #04112B;
   }
  
   .texto_banner{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #EEF8E9;
+    color: #091B40;
     font-weight: 400;
     font-size: 15px;
   }
 
   .botao_banner{
-    background-color: #85EBD9;
+    background-color: #03FA6E;
     width: 180px;
     height: 40px;
     border: 30px;
@@ -79,7 +79,7 @@ main{
 /*Edu financeiro */
 
 .edu_fin{
-  background-color: #85EBD9;
+  background-color: #344D67;
   background-size: cover; 
 }
 
@@ -102,32 +102,35 @@ main{
   display: flex;
   font-size: 40px;
   font-weight: 600;
-  color: #091B40;
+  color: #04112B;
   text-align: center;
   
   font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .cards{
-    width: 100%;
-    background-color:#85EBD9;
-    margin: 2.5rem 0;
-    padding-left: 16rem;
-    padding-right: 16rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* width: 100%; */
+  background-color: #344D67;
+  margin: 2.5rem 0;
+  padding-left: 16rem;
+  padding-right: 16rem;
+  display: flex;
+  /* justify-content: space-evenly; */
+  flex-wrap: nowrap;
+  /* align-content: flex-start; */
+  align-items: center;
 }
 
 .primeiro_motivo, .segundo_motivo, .terceiro_motivo{
   width: 100%;
-  background-color: #85EBD9;
+  background-color: #344D67;
   margin: 0rem 0;
   padding: 4rem;
+  border-radius: 20px;
 }
 
 .topico_motivo {
-  color: #091B40;
+  color: #03FA6E;
   line-height: 30px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 22px;
@@ -156,7 +159,8 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #85EBD9;
+  background-color: #344D67;
+  padding: 0px;
 }
 
 .edu_fin button{
@@ -177,35 +181,41 @@ main{
 }
 
 .botao_edu_fin:hover{
-  background-color:#EEF8E9;
+  background-color:#03FA6E;
 }
 
 /*Perfil*/
 .sobre_meu_perfil{
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   /* align-items: center; */
-  gap: 30px;
-  padding: 50px;
-  justify-content: space-around;
+  /* gap: 20px; */
+  padding: 20px;
+  /* justify-content: space-around; */
+  flex-wrap: nowrap;
+}
+
+.descricao_perfil{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .descricao_perfil img{
-  display: flex;
   padding: 30px;
   height: 300px;
   margin: auto;
 }
 
 .descricao_perfil h2{
+  display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #5EC57E;
   font-size: 15px;
   gap: 20px;
-  align-items: center;
-  justify-content: space-around;
+  /* align-items: center; */
+  /* justify-content: space-around; */
   padding: 20px;
-  
   background-color: #EEF8E9;
   border-radius: 20px;
   
@@ -227,88 +237,53 @@ main{
 .caracteristicas_perfil{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 50px;
-  background-color: #EEF8E9;
-  justify-content: space-around;
+  /* align-items: center; */
+  gap: 20px;
+  padding: 10px;
+  /* background-color: #EEF8E9; */
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+.primeira_caracteristica, .segunda_caracteristica,.terceira_caracteristica{
+  display: flex;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #344D67;
+  margin: 0rem 0;
+  padding: 40px;
+  border-radius: 20px;
+}
+.primeira_caracteristica h2, .segunda_caracteristica h2, .terceira_caracteristica h2{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #5EC57E;
+  font-size: 15px;
+  gap: 20px;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  padding: 22px;
+  /* box-sizing: border-box; */
+  /* background-color: #EEF8E9;*/
 }
 
-.primeira_caracteristica h2{
+.primeira_caracteristica p, .segunda_caracteristica p, .terceira_caracteristica p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #5EC57E;
   font-size: 15px;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
-  background-color: #EEF8E9;
-}
-
-.primeira_caracteristica p{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #5EC57E;
-  font-size: 15px;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
-  background-color: #EEF8E9;
-}
-.segunda_caracteristica h2{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #5EC57E;
-  font-size: 15px;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
-  background-color: #EEF8E9;
-}
-
-.segunda_caracteristica p{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #5EC57E;
-  font-size: 15px;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
-  background-color: #EEF8E9;
-}
-
-.terceira_caracteristica h2{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #5EC57E;
-  font-size: 15px;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
-  background-color: #EEF8E9;
-}
-
-.terceira_caracteristica p{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #5EC57E;
-  font-size: 15px;
-  gap: 20px;
-  align-items: center;
-  justify-content: space-around;
-  padding: 22px;
-  box-sizing: border-box;
-  background-color: #EEF8E9;
+  /* gap: 20px; */
+  /* align-items: center; */
+  /* justify-content: space-around; */
+  padding: 5px;
+  /* box-sizing: border-box; */
+  /* background-color: #EEF8E9;*/
 }
 
 /*footer*/
 
 footer{
-  background-color: #091B40;
+  background-color: #344D67;
   background-size: cover;
   display: flex;
   flex-direction: row;
@@ -322,15 +297,15 @@ footer{
   font-weight: 500;
   font-size: 2vh;
   padding-top: 2vh;
-  color: #85EBD9;
+  color: #03FA6E;
   font-size: 2.3vh;
   padding-top: 1vh;
 }
 
 .imagem_footer{
   display: flex;
-    padding: 30px;
-    height: 200px;
+  padding: 30px;
+  height: 100px;
 }
 
 
