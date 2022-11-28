@@ -5,26 +5,27 @@
     font-family: 'Roboto', sans-serif;
     border: none;
 }
-body{
+/*body{
 
     font-family: 'Dosis', sans-serif;
-    /*color: #091B40;*/
+    /*color: #091B40;
     padding-top: 20px ;
-}
+}*/
 
 
 header {
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     padding-bottom: 0;
     text-align: center;
     background-color: #ffffff;
+    height: 20%;
   }
 
 .header_menu{
     display: flex;
     margin: 0 5%;
-    
+    justify-content: space-around;
     font-size: 20px
   }
 .voltar{
@@ -48,40 +49,62 @@ header {
   }
 
 /*termina o menu*/
-main{
+/*main{
     /* margin-bottom: 1000px; */
-    width: 100%;
-    padding-top: 2.5rem;
-    border-top: 0.14px solid rgb(9, 27, 64);  
-}
-._banner{
+    /* width: 100%; */
+    /* padding-top: 2.5rem; */
+    /* border-top: 0.14px solid rgb(9, 27, 64);
+}*/
+.banner{
     background-color: #ffffff;
     background-size: cover;
 }
 
 .principal_banner{
+    background-color: #344D67;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    padding: 6% 13% 6% 13%;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-around;
 }
-.imagem_cadeado_cadastro img{
+/*.imagem_banner{
     display: flex;
     padding: 30px;
     height: 400px;
-}
+    width: 100%;
+}*/
 
 .div_inputs{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    padding: 10px;
+}
+.o_todo_inputs{
+    display: flex;
     flex-direction: row;
+    margin: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+
 }
 
 .titulo_cadastro h1{
+    display: flex;
     color: #03FA6E;
-    text-decoration: underline;
+    justify-content: center;
+    height: 40px;
+    width: 140px;
+    margin: -5px;
+
+    /*text-decoration: underline;*/
 }
 
 .lado_a, .lado_b{
@@ -102,35 +125,39 @@ main{
     justify-content: center;   
 } 
 
-label, input{
+/*label, input{
 
 }
 
 .select_uf{
 
-}
+}*/
 
 .investe_select, .tipo_select, .senha_cadastro, .confirmar_senha{
     margin-bottom: 30px;
     padding: 10px;
-    border-bottom: 2px solid;
+    /* border-bottom: 2px solid; */
     text-align: center;
     outline: none;
     width: 100%;
     justify-content: center; 
 } 
 
-.select_voce_investe{
+/*.select_voce_investe{
 
 }
 .select_tipo_investimento{
 
-}
+}*/
 
 .button_cadastro{
-    background-color: #344D67;
+    display: flex;
+    flex-direction: column;
+    background-color: #03FA6E;
     height: 40px;
-    width: 140px;    
+    /* width: 140px; */
+    padding: 0px;
+    margin: -23px;   
 }
 
 .button button{

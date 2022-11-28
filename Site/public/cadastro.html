@@ -21,36 +21,37 @@
     <section class="banner">
       <div class ="principal_banner">
       <div class="imagem_banner">
-        <img class="imagem_cadeado_cadastro"src="../public/assets/icon/porquinho_login.png"alt="imagem de cadeado"/>
+        <img class="imagem_cadeado_cadastro"src="../public/assets/icon/porquinho_login.png"alt="imagem de porquinho"/>
       </div>
 
       <div class="div_inputs">
       <div class="titulo_cadastro">
         <h1>Cadastro</h1>
       </div>
+      <div class="o_todo_inputs">
       <div class="lado_a">
       <!--nome-->
       <div class="input_nome">
-        <label  class="label_nome"for="input_nome">Nome</label>
+        <label  class="label_nome"for="input_nome">Nome</label><br>
           <input onkeyup="verificar_nome()" type="text" id="vefificar_nome" placeholder="insira seu nome">
         <br>
       </div>
       <!--email-->
       <div class="input_email">
-          <label for="label_email">E-mail</label>
+          <label for="label_email">E-mail</label><br>
           <input onkeyup="verificar_email()" type="email" id="verificar_email" placeholder="exemplo@exemplo.com">
       </div>
       
       <!--celular-->
       <div class="input_num">
-        <label for="label_num">Número</label>
+        <label for="label_num">Número</label><br>
         <input onkeyup="verificar_num()" type="number" id="verificar_num" placeholder="Número da residência">
       </div>
       <!--uf-->
       <div class="uf_select">
-        UF:<br />
+        UF:
         <select class="select_uf" name="" id="select_uf">
-          <option value="sp">SP</option>
+          <option value="sp">Sudeste</option>
           <option value="rj">RJ</option>
           <option value="ba">BA</option>
           <option value="sc">SC</option>
@@ -64,7 +65,7 @@
       <!--você investe?-->
       <div class="lado_b">
       <div class="investe_select">
-        Você investe?<br/>
+        Você investe?<br>
         <select class="select_voce_investe" name="" id="select_investe">
           <option value="sim">Sim</option>
           <option value="nao">Não</option></select
@@ -84,7 +85,7 @@
       </div>
       <!--senha-->
       <div class="senha_cadastro">
-        <label for="label_senha">Senha</label>
+        <label for="label_senha">Senha</label><br>
         <input onkeyup="verificar_senha()" type="password" id="verificar_senha" placeholder="no mínimo 8 caracteres">
       </div>
       <!--confirmar senha-->
@@ -93,6 +94,7 @@
         <input onkeyup="confirmar_senha()" type="password" id="input_senha_confirmacao" placeholder="Digite sua senha novamente">
       </div>
     </div>
+  </div>
   </div>
       <!--botão-->
       <div class="button_cadastro">

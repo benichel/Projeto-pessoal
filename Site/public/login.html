@@ -1,31 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/Xbox_one_icone.png" type="image/x-icon">
+    <script src="funcoes.js"></script>
+    <link rel="stylesheet" href="./css/style_login.css">
     <title>Login</title>
-  </head>
-  <body class="corpo_login">
-    <header class="header_login">
-      <div class="header_da_img">
-      <div class="img_login">
-        <img class="imagem_login" src="" alt="" />
-      </div>
-    </div>
-      <ul class="link_voltar_login">
-        <li><a class="inicio_login"href="#inicio">voltar</a></li>
-      </ul>
-      
-      <div class="corpo_login">
-        <h1 class="titulo_login">Login</h1>
-        <br/>
-        Login <br/><input class="login"type="text" id="input_login"/><br />
-        Senha <br/><input class="senha" type="password" id="input_senha_login"/><br />
-      </div>
-      <div class="button_login">
-        <button class="button_login" onclick="entrar()">Entrar</button>
-      </div>
+</head>
+<body>
+    <header>
+        <div class="container_header">
+            <div class="container_nevegacao">
+                    <a class="outros" href="./index.html">Ínicio</a>
+                    <a class="outros" href="./cadastro.html">Cadastro</a>
+                    <a class="agora" href="">Login</a>
+            </div>
+        </div>
     </header>
-  </body>
+    <div class="container">
+      <div class="img_porquinho">
+        <img src="./assets/icon/porquinho 3.png" alt="logo porquinho">
+      </div>
+        <div class="login">
+            <div class="inputs">
+                <label for="input_email">E-mail</label>
+                <input id="input_email" type="email" placeholder="exemplo@exemplo.com">
+            </div>
+            <div class="inputs">
+                <label for="input_senha">Senha</label>
+                <input id="input_senha" type="password" placeholder="no mínimo 8 caracteres">
+            </div>
+            <div class="login_botao">
+                <button onclick="entrar()" class="botao_cadastrar">Entrar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function entrar() {
+        var email_var = input_email.value;
+        var senha_var = input_senha.value;
+
+        if (email_var == "" || senha_var == "") {
+            alert(`Preencha todos os campos`)
+            return false;
+        }
+        else {
+            console.log("FORM LOGIN: ", email_var);
+            console.log("FORM SENHA: ", senha_var);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: email_var,
+                senhaServer: senha_var
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        alert(`Derecionando para o dashboard...`)
+                        window.location = "./dashboard/dashboard.html";
+                    },); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+        }
+
+        
+    }
+</script>
+
 </html>

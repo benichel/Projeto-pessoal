@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+.container_header{
+    background-color: #ffffff;
+    height: 100%;
+    padding: 3px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid #222222;
+    text-align: center;
+}
+
+.container_nevegacao{
+display: flex;
+justify-content: space-between;
+font-size: 20px;
+height: 30%;
+width: 27%;
+}
+
+.outros{
+    display: flex;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #344D67;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.agora{
+    display: flex;
+    justify-content: space-between;
+    color: #344D67;
+    text-decoration: underline;
+}
+
+.container_nevegacao ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.container_header{
+    height: 55px;
+    width: 155px;
+}
+
+header{
+    height: 20%;
+}
+
+.container{
+    background-size: cover;
+    background-position-y: -110px;
+    height: 89.3vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_porquinho{
+    display: flex;
+    padding: 30px;
+    height: 400px;
+    width: 100%;
+}
+
+.login{
+    margin-right: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 40%;
+    height: 60vh;
+}
+
+.inputs input{
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+    outline: none;
+    width: 100%;
+    justify-content: center;
+}
+
+.inputs {
+    width: 60%;
+}
+
+.login_botao{
+    background-color: #03FA6E;
+    margin-top: 50px;
+    height: 40px;
+    width: 140px;
+}
+
+.botao_cadastrar{
+    color: #344D67;
+    background-color: #03FA6E;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+}
