@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    titulo<br />
+    <div>
+      <input type="radio" id="jan-mar" name="mes" value="George" />
+      <label for="jan-mar">Jan - Mar</label>
+    </div>
+
+    <div>
+      <input type="radio" id="abr-jun" name="mes" value="Paul" />
+      <label for="abr-jun">Abr - Jun</label>
+    </div>
+
+    <div>
+      <input type="radio" id="jul-set" name="mes" value="Ringo" />
+      <label for="jul-set">Jul - Set</label>
+    </div>
+
+    <div>
+      <input type="radio" id="out-dez" name="mes" value="John" />
+      <label for="out-dez">Out - Dez</label>
+    </div>
+
+    <br />
+    <!-- 1 = George, 2 = Paul, 3 = Ringo, 4= John  -->
+
+    Quem você seria em uma banda? <br />
+
+    <div>
+      <input type="radio" id="vocalista" name="banda" value="John" />
+      <label for="vocalista">Vocalista</label>
+    </div>
+
+    <div>
+      <input type="radio" id="baixista" name="banda" value="Paul" />
+      <label for="baixista">Baixista</label>
+    </div>
+
+    <div>
+      <input type="radio" id="guitarrista" name="banda" value="George" />
+      <label for="guitarrista">Guitarrista</label>
+    </div>
+
+    <div>
+      <input type="radio" id="bateirista" name="banda" value="Ringo" />
+      <label for="bateirista">Bateirista</label>
+    </div>
+    <br />
+    <!-- 1 = John, 2 = Paul, 3 = George, Bateirista = Ringo -->
+
+    Você em seu grupo é? <br />
+
+    <div>
+      <input type="radio" id="quieto" name="personalidade" value="George" />
+      <label for="quieto">Quieto</label>
+    </div>
+
+    <div>
+      <input type="radio" id="brincalhão" name="personalidade" value="Ringo" />
+      <label for="brincalhão">Brincalhão</label>
+    </div>
+
+    <div>
+      <input type="radio" id="social" name="personalidade" value="Paul" />
+      <label for="social">Social</label>
+    </div>
+
+    <div>
+      <input type="radio" id="lider" name="personalidade" value="John" />
+      <label for="lider">Líder</label>
+    </div>
+    <br />
+
+    <br />
+    <!-- 1 = George, 2 = Ringo, 3 = Paul, 4 = John -->
+
+ 
+
+    <button onclick="verificar()">Verificar integrante</button>
+    <br />
+    <div id="resultado"></div>
+  </body>
+</html>
+
+<script>
+  var integrantes = [];
+
+  function verificar() {
+    var mes = document.querySelector('input[name="mes"]:checked').value;
+    var banda = document.querySelector('input[name="banda"]:checked').value;
+    var personalidade = document.querySelector('input[name="personalidade"]:checked').value;
+    integrantes.push(mes, banda, personalidade);
+
+    // verificar qual nome mais aparece no array
+   
+   
+    var countJohn = 0;
+    var countGeorge = 0;
+    var countPaul = 0;
+    var countRingo = 0;
+
+    for (var i = 0; i < integrantes.length; i++) {
+      if (integrantes[i] == "John") {
+        countJohn++;
+      } else if (integrantes[i] == "George") {
+        countGeorge++;
+      } else if (integrantes[i] == "Paul") {
+        countPaul++;
+      } else if (integrantes[i] == "Ringo") {
+        countRingo++;
+      }
+    }
+
+    if (countJohn > countGeorge && countJohn > countPaul && countJohn > countRingo) {
+      resultado.innerHTML = "Você é John Lennon";
+    } else if (countGeorge > countJohn && countGeorge > countPaul && countGeorge > countRingo) {
+      resultado.innerHTML = "Você é George Harrison";
+    } else if (countPaul > countJohn && countPaul > countGeorge && countPaul > countRingo) {
+      resultado.innerHTML = "Você é Paul McCartney";
+    } else if (countRingo > countJohn && countRingo > countGeorge && countRingo > countPaul) {
+      resultado.innerHTML = "Você é Ringo Starr";
+    } else {
+      resultado.innerHTML = "Você é um dos Beatles";
+    }
+  }
+</script>
