@@ -4,131 +4,134 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quiz</title>
   </head>
   <body>
     
-    titulo<br />
+    1º round<br />
     <div>
-      <input type="radio" id="jan-mar" name="mes" value="George" />
-      <label for="jan-mar">Jan - Mar</label>
+      <input type="radio" id="a_arrojado" name="mudancas" value="arrojado" />
+      <label for="a_arrojado">Adora mudanças e se motiva quando aparece novos desafios.</label>
     </div>
 
     <div>
-      <input type="radio" id="abr-jun" name="mes" value="Paul" />
-      <label for="abr-jun">Abr - Jun</label>
+      <input type="radio" id="a_moderado" name="mudancas" value="moderado" />
+      <label for="a_moderado">Mudar é complicado, a menos que explique passo a passo de como será a mudança.</label>
     </div>
 
     <div>
-      <input type="radio" id="jul-set" name="mes" value="Ringo" />
-      <label for="jul-set">Jul - Set</label>
+      <input type="radio" id="a_conservador" name="mudancas" value="conservador" />
+      <label for="a_conservador">Se considera detalhista, organizado e analítico e segue a risca qualquer tarefa para não cometer erros.</label>
+    </div>
+    
+
+    <br />
+  
+    2º round<br />
+
+    <div>
+      <input type="radio" id="b_moderado" name="decisao" value="moderado" />
+      <label for="b_moderado">Ouve todos os lados da moeda, pois gosta de tomar a decisão mais segura para ele e os amigos.</label>
     </div>
 
     <div>
-      <input type="radio" id="out-dez" name="mes" value="John" />
-      <label for="out-dez">Out - Dez</label>
+      <input type="radio" id="b_arrojado" name="decisao" value="arrojado" />
+      <label for="b_arrojado">Não é indeciso e toma decisões rápidas mesmo que o resultado seja negativo.</label>
+    </div>
+
+    <div>
+      <input type="radio" id="b_conservador" name="decisao" value="conservador" />
+      <label for="b_conservador">Não fala muito, mas quando fala as pessoas prestam atenção porque costumam ser muito assertivos.</label>
+    </div>
+
+
+    3º round <br />
+
+    <div>
+      <input type="radio" id="c_moderado" name="conflito" value="moderado" />
+      <label for="c_moderado">Detesta se envolver em conflitos, por isso tenta mediar quando vê um.</label>
+    </div>
+
+    <div>
+      <input type="radio" id="c_conservador" name="conflito" value="conservador" />
+      <label for="c_conservador">Se sente muito mal quando criticam seu trabalho.</label>
+    </div>
+
+    <div>
+      <input type="radio" id="c_arrojado" name="conflito" value="arrojado" />
+      <label for="c_arrojado">Não tem problemas em perder hoje, porque sabe que vai ganhar amanhã.</label>
     </div>
 
     <br />
-    <!-- 1 = George, 2 = Paul, 3 = Ringo, 4= John  -->
 
-    Quem você seria em uma banda? <br />
+
+    4º round<br />
 
     <div>
-      <input type="radio" id="vocalista" name="banda" value="John" />
-      <label for="vocalista">Vocalista</label>
+      <input type="radio" id="d_moderado" name="conquista" value="moderado" />
+      <label for="d_moderado">É seletivo e tem poucos amigos, pois os que tem são de confiança.</label>
     </div>
 
     <div>
-      <input type="radio" id="baixista" name="banda" value="Paul" />
-      <label for="baixista">Baixista</label>
+      <input type="radio" id="d_arrojado" name="conquista" value="arrojado" />
+      <label for="d_arrojado">Se considera competitivo, obstinado e determinado quando quer conquistar algo ou alguém.</label>
     </div>
 
     <div>
-      <input type="radio" id="guitarrista" name="banda" value="George" />
-      <label for="guitarrista">Guitarrista</label>
+      <input type="radio" id="d_conservador" name="conquista" value="conservador"/>
+      <label for="d_conservador">Detesta contato físico, mas consegue manter uma boa relação com as pessoas.</label>
     </div>
+    
+    <br/>
 
-    <div>
-      <input type="radio" id="bateirista" name="banda" value="Ringo" />
-      <label for="bateirista">Bateirista</label>
-    </div>
-    <br />
-    <!-- 1 = John, 2 = Paul, 3 = George, Bateirista = Ringo -->
-
-    Você em seu grupo é? <br />
-
-    <div>
-      <input type="radio" id="quieto" name="personalidade" value="George" />
-      <label for="quieto">Quieto</label>
-    </div>
-
-    <div>
-      <input type="radio" id="brincalhão" name="personalidade" value="Ringo" />
-      <label for="brincalhão">Brincalhão</label>
-    </div>
-
-    <div>
-      <input type="radio" id="social" name="personalidade" value="Paul" />
-      <label for="social">Social</label>
-    </div>
-
-    <div>
-      <input type="radio" id="lider" name="personalidade" value="John" />
-      <label for="lider">Líder</label>
-    </div>
-    <br />
-
-    <br />
-    <!-- 1 = George, 2 = Ringo, 3 = Paul, 4 = John -->
-
- 
-
-    <button onclick="verificar()">Verificar integrante</button>
-    <br />
+    <button onclick="seu_resultado()">Seu resultado</button>
+    <br/>
     <div id="resultado"></div>
   </body>
 </html>
 
 <script>
-  var integrantes = [];
+  var perfil = [];
+  
 
-  function verificar() {
-    var mes = document.querySelector('input[name="mes"]:checked').value;
-    var banda = document.querySelector('input[name="banda"]:checked').value;
-    var personalidade = document.querySelector('input[name="personalidade"]:checked').value;
-    integrantes.push(mes, banda, personalidade);
-
-    // verificar qual nome mais aparece no array
+  function seu_resultado() {
+    var mudancas = document.querySelector('input[name="mudancas"]:checked').value;
+    var decisao = document.querySelector('input[name="decisao"]:checked').value;
+    var conflito = document.querySelector('input[name="conflito"]:checked').value;
+    var conquista = document.querySelector('input[name="conquista"]:checked').value;
+    perfil.push(mudancas, decisao, conflito, conquista);
+    console.log(perfil);
+    // verificar qual perfil mais aparece no array
    
    
-    var countJohn = 0;
-    var countGeorge = 0;
-    var countPaul = 0;
-    var countRingo = 0;
+    var count_arrojado = 0;
+    var count_moderado = 0;
+    var count_conservador = 0;
 
-    for (var i = 0; i < integrantes.length; i++) {
-      if (integrantes[i] == "John") {
-        countJohn++;
-      } else if (integrantes[i] == "George") {
-        countGeorge++;
-      } else if (integrantes[i] == "Paul") {
-        countPaul++;
-      } else if (integrantes[i] == "Ringo") {
-        countRingo++;
-      }
+    for (var i = 0; i < perfil.length; i++) {
+      if (perfil[i] == "arrojado") {
+        count_arrojado++;
+      } else if (perfil[i] == "moderado") {
+        count_moderado++;
+      } else if (perfil[i] == "conservador") {
+        count_conservador++;
+      } 
     }
 
-    if (countJohn > countGeorge && countJohn > countPaul && countJohn > countRingo) {
-      resultado.innerHTML = "Você é John Lennon";
-    } else if (countGeorge > countJohn && countGeorge > countPaul && countGeorge > countRingo) {
-      resultado.innerHTML = "Você é George Harrison";
-    } else if (countPaul > countJohn && countPaul > countGeorge && countPaul > countRingo) {
-      resultado.innerHTML = "Você é Paul McCartney";
-    } else if (countRingo > countJohn && countRingo > countGeorge && countRingo > countPaul) {
-      resultado.innerHTML = "Você é Ringo Starr";
-    } else {
-      resultado.innerHTML = "Você é um dos Beatles";
+    if (count_arrojado > count_moderado && count_arrojado > count_conservador) {
+      resultado.innerHTML = "Parabéns! Você é Arrojado!";
+    } else if (count_moderado > count_arrojado && count_moderado > count_conservador) {
+      resultado.innerHTML = "Parabéns! Você é Moderado";
+    } else if (count_conservador > count_arrojado && count_conservador > count_moderado) {
+      resultado.innerHTML = "Parabéns! Você é Conservador";
+
+    } else if(count_arrojado == count_moderado) {//pizzinha do desempate
+      resultado.innerHTML = "Muito bem! Você é moderado à caminho do arrojado";
+    } else if(count_arrojado == count_conservador){
+      resultado.innerHTML = "Muito bem! Você é conservador com uma pitada de arrojado";
+    } else if (count_moderado == count_conservador){
+      resultado.innerHTML = "Muito bem! Você é conservador à caminho do moderado";
     }
+  
   }
 </script>

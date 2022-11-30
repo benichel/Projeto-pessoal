@@ -23,6 +23,7 @@ var mySqlConfig = {
     database: "projeto_pessoal",
     user: "root",
     password: "Sptech",
+    port: 3306
 };
 
 function executar(instrucao) {
