@@ -33,19 +33,19 @@
       <!--nome-->
       <div class="input_nome">
         <label  class="label_nome"for="input_nome">Nome</label><br>
-          <input onkeyup="verificar_nome()" type="text" id="vefificar_nome" placeholder="insira seu nome">
+          <input onkeyup="verificar_nome()" type="text" id="input_nome" placeholder="insira seu nome">
         <br>
       </div>
       <!--email-->
       <div class="input_email">
           <label for="label_email">E-mail</label><br>
-          <input onkeyup="verificar_email()" type="email" id="verificar_email" placeholder="exemplo@exemplo.com">
+          <input onkeyup="verificar_email()" type="email" id="input_email" placeholder="exemplo@exemplo.com">
       </div>
       
       <!--celular-->
       <div class="input_num">
         <label for="label_num">Número</label><br>
-        <input onkeyup="verificar_num()" type="number" id="verificar_num" placeholder="Número da residência">
+        <input onkeyup="verificar_num()" type="number" id="input_num" placeholder="Número da residência">
       </div>
       <!--uf-->
       <div class="uf_select">
@@ -86,7 +86,7 @@
       <!--senha-->
       <div class="senha_cadastro">
         <label for="label_senha">Senha</label><br>
-        <input onkeyup="verificar_senha()" type="password" id="verificar_senha" placeholder="no mínimo 8 caracteres">
+        <input onkeyup="verificar_senha()" type="password" id="input_senha" placeholder="no mínimo 8 caracteres">
       </div>
       <!--confirmar senha-->
       <div class="confirmar_senha">
@@ -167,13 +167,12 @@ function verificar_nome() {
         // Agora vá para o método fetch logo abaixo
         var  nome = input_nome.value;
         var  num = input_num.value;
-        
+        /*var  cep = input_cep.value;*/
         var  email = input_email.value;
         var  senha = input_senha.value;
         var  senha_confirm = input_senha_confirmacao.value;
-        var  estilo = select_estilo.value;
 
-        if (nome == "" || num == "" || email == "" || senha == "" || senha_confirm == "" || estilo == "") {
+        if (nome == "" || num == "" || email == "" || senha == "" || senha_confirm == "") {
             alert("Por favor, preencha todos os campos");
         } else if (nome.length <= 3) {
             alert("O nome deve ter mais de 2 caracteres!");
@@ -197,15 +196,19 @@ function verificar_nome() {
                 // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nome,
                 emailServer: email,
-                senhaServer: senha,
-                estiloServer: estilo
+                senhaServer: senha
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
+            /*console.log(resposta.json())*/
+            resposta.json().then(function(json){ 
+              console.log(json);
+            });
+
 
             if (resposta.ok) {
-                fetch("/usuarios/cadastrarE", {
+                fetch("/usuarios/cadastrar_endereco", {
                 method: "POST",
                 headers: {
                 "Content-Type": "application/json"
@@ -213,12 +216,13 @@ function verificar_nome() {
             body: JSON.stringify({
                 // crie um atributo que recebe o valor recuperado aqui
                 // Agora vá para o arquivo routes/usuario.js
-                num_server: num,
-                cep_server: cep
+                numeroServer: num,
+                cepServer: "04169000"
             })
         }).then(function (resposta) {
 
             console.log("resposta: ", resposta);
+            
 
             if (resposta.ok) {
                 setTimeout(() => {
