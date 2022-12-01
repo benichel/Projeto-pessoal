@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>ranking perfil</title>
+</head>
+
+<body>
+    <div class="menu-dashboard">
+        <div class="Logo">
+            <img src="" alt="Logo" width="150px" height="55px"/>
+        </div>
+
+        <div class="principal-menu">
+            <div class="perfil-item-menu">
+                Bem vindo <span id="b_usuario"></span>!
+            </div>
+        </div>
+        <div class="importante-menu">
+            <div class="sair-item-menu">
+                <a href="../index.html">
+                    <img src="" alt="Item Sair do menu" width="25px">
+                    <p>Sair</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="dashboards">
+        <div class="graficos">
+            <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
+let proximaAtualizacao;
+        
+        window.onload = obterDadosGrafico(1);
+    
+        // O gráfico é construído com três funções:
+        // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+        // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+        // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
+    
+        // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+        // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+        // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
+    
+        //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+        //     Para ajustar o "select", ajuste o comando sql em src/models
+        function obterDadosGrafico() {
+    
+            if (proximaAtualizacao != undefined) {
+                clearTimeout(proximaAtualizacao);
+            }
+    
+            fetch(`/medidas/ultimas`, { cache: 'no-store' }).then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        resposta.reverse();
+    
+                        plotarGrafico(resposta, );
+                    });
+                } else {
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+                .catch(function (error) {
+                    console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+                });
+        }
+    
+        // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+        // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
+        // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+        function plotarGrafico(resposta, ) {
+            console.log('iniciando plotagem do gráfico...');
+    
+            // Criando estrutura para plotar gráfico - labels
+            let labels = [];
+            
+            // Criando estrutura para plotar gráfico - dados
+            let dados = {
+                labels: labels,
+                datasets: [{
+                    label: 'Quuantidade de seleções',
+                    backgroundColor: 'green',
+                    data: [],
+                    fill: false,
+                    borderColor: 'green',
+                },
+                ]
+            };
+            
+            console.log('----------------------------------------------')
+            console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+            console.log(resposta)
+            
+            // Inserindo valores recebidos em estrutura para plotar o gráfico
+            for (i = 0; i < resposta.length; i++) {
+                var registro = resposta[i];
+                labels.push(registro.nome);
+                dados.datasets[0].data.push(registro.quantidadeDeSelecoes);
+            }
+            
+            console.log('----------------------------------------------')
+            console.log('O gráfico será plotado com os respectivos valores:')
+            console.log('Labels:')
+            console.log(labels)
+            console.log('Dados:')
+            console.log(dados.datasets)
+            console.log('----------------------------------------------')
+            
+            // Criando estrutura para plotar gráfico - config
+            const config = {
+                type: 'bar',
+                data: dados,
+            };
+    
+            // Adicionando gráfico criado em div na tela
+            let myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+    
+            // setTimeout(() => atualizarGrafico(dados, myChart), 2000);
+        }
+    
+</script>
+
+</html>

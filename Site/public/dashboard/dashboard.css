@@ -1,0 +1,106 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        background-color: #D9D9D9;
+    }
+
+    .menu-dashboard{
+        display: flex;
+        flex-direction: column;
+        border-right: 4px solid #04112B;
+        background-color: #344D67;
+        height: 100%;
+        width: 20%;
+        padding: 2% 4%;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: #03FA6E;
+    }
+
+    .menu-dashboard a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #03FA6E;
+    }
+
+    /*.menu-dashboard img{
+        margin-right: 10%;
+    }*/
+
+    /*.menu-dashboard .principal-menu img:hover{
+        width: 26px;
+    }*/
+
+    /*.menu-dashboard .importante-menu img:hover{
+        width: 26px;
+    }*/
+
+    .principal-menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85%;
+        color: #04112B;
+        font-size: 20px;
+    }
+
+    .importante-menu{
+        height: 15%;
+    }
+
+    .principal-menu a{
+        margin-top: 50px;
+    }
+
+    .importante-menu a{
+        margin-top: 10px;
+    }
+
+    .principal-menu a p:hover{
+        border-bottom: 2px solid white;
+        font-weight: bold;
+    }
+
+    .sair-item-menu a p:hover{
+        border-bottom: 2px solid #03FA6E;
+        font-weight: bold;
+    }
+
+    .importante-menu a p:hover{
+        font-weight: bold;
+    }
+
+    .dashboards{
+        width: 80%;
+        height: 100%;
+    }
+
+    .graficos{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div_chart01{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chart01{
+        height: 63vh;
+        width: 60vw;
+        background-color: #FAF9FF;
+    }

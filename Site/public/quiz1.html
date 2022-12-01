@@ -91,10 +91,11 @@
 </html>
 
 <script>
-  var perfil = [];
   
-
+  
   function seu_resultado() {
+    var perfil = [];
+    resultado.innerhtml='';
     var mudancas = document.querySelector('input[name="mudancas"]:checked').value;
     var decisao = document.querySelector('input[name="decisao"]:checked').value;
     var conflito = document.querySelector('input[name="conflito"]:checked').value;
@@ -107,13 +108,13 @@
     var count_arrojado = 0;
     var count_moderado = 0;
     var count_conservador = 0;
-
+ console.log(perfil)
     for (var i = 0; i < perfil.length; i++) {
       if (perfil[i] == "arrojado") {
         count_arrojado++;
       } else if (perfil[i] == "moderado") {
         count_moderado++;
-      } else if (perfil[i] == "conservador") {
+      } else {
         count_conservador++;
       } 
     }
@@ -126,12 +127,12 @@
       resultado.innerHTML = "Parabéns! Você é Conservador";
 
     } else if(count_arrojado == count_moderado) {//pizzinha do desempate
-      resultado.innerHTML = "Muito bem! Você é moderado à caminho do arrojado";
+      resultado.innerHTML = "Muito bem! é arrojado";
     } else if(count_arrojado == count_conservador){
-      resultado.innerHTML = "Muito bem! Você é conservador com uma pitada de arrojado";
+      resultado.innerHTML = "voce é arrojado";
     } else if (count_moderado == count_conservador){
-      resultado.innerHTML = "Muito bem! Você é conservador à caminho do moderado";
+      resultado.innerHTML = "você é moderado!";
     }
-  
+   
   }
 </script>
