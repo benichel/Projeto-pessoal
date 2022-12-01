@@ -5,6 +5,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;  
 }
 
+
 body{
     height: 100vh;
     display: flex;
@@ -29,6 +30,24 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.conteudo_quiz{
+    background-color: #03FA6E;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.primeiro_roud, .segundo_round, .terceiro_round, .quarto-round {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.primeiro_roud, .segundo_round, .terceiro_round, .quarto-round h4{
+    color: #091B40;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .content{

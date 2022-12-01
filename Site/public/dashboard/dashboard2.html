@@ -1,0 +1,49 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ranking</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body style="display: flex">
+    <div>
+        <canvas id="chart_perfil" style="position: relative; height:40vh; width:40vw"></canvas>
+    </div>
+</body>
+
+<script>
+    const labels_perfil = [
+        'Conservador',
+        'Moderado',
+        'Arrojado',
+    ];
+
+    const perfil_invest = {
+        labels: labels_perfil,
+        datasets: [{
+            label: 'Temperatura Média',
+            backgroundColor: '#5EC57E',
+            borderColor: '#5EC57E',
+            data: [22, 24, 27, 23, 20, 18],
+        }]
+    };
+
+    const config_perfil = {
+        type: 'bar',
+        ranking: perfil_invest,
+        options: {}
+    };
+</script>
+
+<script>
+    const myChart2 = new Chart(
+        document.getElementById('chart_perfil'),
+        config_perfil
+    );
+</script>
+
+</html>

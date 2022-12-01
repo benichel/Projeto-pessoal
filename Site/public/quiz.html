@@ -3,12 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="./assets/icon/seguro.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/quiz.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
   </head>
   <body>
-    
-    1º round<br />
+
+   <div class="conteudo_quiz">
+    <div class="primeiro_roud">
+    <h4><b>1º round</b></h4><br/>
+    <div class="caixa_primeiro_round">
     <div>
       <input type="radio" id="a_arrojado" name="mudancas" value="arrojado" />
       <label for="a_arrojado">Adora mudanças e se motiva quando aparece novos desafios.</label>
@@ -23,32 +28,35 @@
       <input type="radio" id="a_conservador" name="mudancas" value="conservador" />
       <label for="a_conservador">Se considera detalhista, organizado e analítico e segue a risca qualquer tarefa para não cometer erros.</label>
     </div>
-    
+  </div>
+  </div>
 
-    <br />
-  
-    2º round<br />
 
+  <div class="segundo_round">
+    <h4><b>2º round</b></h4><br/>
+    <div class="caixa_segundo_round">
     <div>
-      <input type="radio" id="b_moderado" name="decisao" value="moderado" />
+      <input type="radio" id="b_moderado" name="decisao" value="moderado"/>
       <label for="b_moderado">Ouve todos os lados da moeda, pois gosta de tomar a decisão mais segura para ele e os amigos.</label>
     </div>
 
     <div>
-      <input type="radio" id="b_arrojado" name="decisao" value="arrojado" />
+      <input type="radio" id="b_arrojado" name="decisao" value="arrojado"/>
       <label for="b_arrojado">Não é indeciso e toma decisões rápidas mesmo que o resultado seja negativo.</label>
     </div>
 
     <div>
-      <input type="radio" id="b_conservador" name="decisao" value="conservador" />
+      <input type="radio" id="b_conservador" name="decisao" value="conservador"/>
       <label for="b_conservador">Não fala muito, mas quando fala as pessoas prestam atenção porque costumam ser muito assertivos.</label>
     </div>
+    </div>
+  </div>
 
-
-    3º round <br />
-
+  <div class="terceiro_round">
+    <h4><b>3º round</b></h4><br/><br/>
+    <div class="caixa_terceiro_round">
     <div>
-      <input type="radio" id="c_moderado" name="conflito" value="moderado" />
+      <input type="radio" id="c_moderado" name="conflito" value="moderado"/>
       <label for="c_moderado">Detesta se envolver em conflitos, por isso tenta mediar quando vê um.</label>
     </div>
 
@@ -58,22 +66,22 @@
     </div>
 
     <div>
-      <input type="radio" id="c_arrojado" name="conflito" value="arrojado" />
+      <input type="radio" id="c_arrojado" name="conflito" value="arrojado"/>
       <label for="c_arrojado">Não tem problemas em perder hoje, porque sabe que vai ganhar amanhã.</label>
     </div>
-
-    <br />
-
-
-    4º round<br />
-
+  </div>
+  </div>
+  
+  <div class="quarto-round">
+    <h4><b>4º round</b></h4><br/>
+    <div class="caixa_quarto_round">
     <div>
-      <input type="radio" id="d_moderado" name="conquista" value="moderado" />
+      <input type="radio" id="d_moderado" name="conquista" value="moderado"/>
       <label for="d_moderado">É seletivo e tem poucos amigos, pois os que tem são de confiança.</label>
     </div>
 
     <div>
-      <input type="radio" id="d_arrojado" name="conquista" value="arrojado" />
+      <input type="radio" id="d_arrojado" name="conquista" value="arrojado"/>
       <label for="d_arrojado">Se considera competitivo, obstinado e determinado quando quer conquistar algo ou alguém.</label>
     </div>
 
@@ -81,11 +89,15 @@
       <input type="radio" id="d_conservador" name="conquista" value="conservador"/>
       <label for="d_conservador">Detesta contato físico, mas consegue manter uma boa relação com as pessoas.</label>
     </div>
-    
-    <br/>
+  </div>
+  </div>
+</div>
 
+
+  <div class="button">
     <button onclick="seu_resultado()">Seu resultado</button>
     <br/>
+  </div>
     <div id="resultado"></div>
   </body>
 </html>
