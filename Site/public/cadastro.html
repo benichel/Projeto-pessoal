@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="./assets/icon/icon_navegacao_cad.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="funcoes.js"></script>
     <link rel="stylesheet" href="./css/style_cadastro.css" />
@@ -21,7 +22,7 @@
     <section class="banner">
       <div class ="principal_banner">
       <div class="imagem_banner">
-        <img class="imagem_cadeado_cadastro"src="../public/assets/icon/porquinho_login.png"alt="imagem de porquinho"/>
+        <img class="imagem_cadeado_cadastro"src="../public/assets/icon/Capturar.PNG"alt="imagem de porquinho"/>
       </div>
 
       <div class="div_inputs">
@@ -41,47 +42,22 @@
           <label for="label_email">E-mail</label><br>
           <input onkeyup="verificar_email()" type="email" id="input_email" placeholder="exemplo@exemplo.com">
       </div>
-      
+
       <!--celular-->
       <div class="input_num">
         <label for="label_num">Número</label><br>
         <input onkeyup="verificar_num()" type="number" id="input_num" placeholder="Número da residência">
       </div>
-      <!--uf-->
-      <div class="uf_select">
-        UF:
-        <select class="select_uf" name="" id="select_uf">
-          <option value="sp">Sudeste</option>
-          <option value="rj">RJ</option>
-          <option value="ba">BA</option>
-          <option value="sc">SC</option>
-          <option value="rs">RS</option>
-        </select>
-      </div>
     </div>
-    
-    
+
+
 <!--parte 2-->
       <!--você investe?-->
       <div class="lado_b">
-      <div class="investe_select">
-        Você investe?<br>
-        <select class="select_voce_investe" name="" id="select_investe">
-          <option value="sim">Sim</option>
-          <option value="nao">Não</option></select
-        ><br/>
-      </div>
-      <!--tipo-->
-      <div class="tipo_select">
-        Em qual tipo?<br />
-        <select class="select_tipo_investimento" id="select_tipo_investimento">
-          <option value="tesouro_direto">Tesouro Direto</option>
-          <option value="cdb">CDB</option>
-          <option value="lci_e_lca">LCI e LCA</option>
-          <option value="açoes_de_empresas">Ações de empresas</option>
-          <option value="fundos_de_invest">Fundos de Investimentos</option>
-          <option value="outros">Outros</option></select
-        ><br />
+      <!--cep-->
+      <div class="input_cep">
+        <label for="label_cep">CEP</label><br>
+        <input onkeyup="verificar_cep()" type="number" id="input_cep" placeholder="CEP">
       </div>
       <!--senha-->
       <div class="senha_cadastro">
@@ -139,6 +115,16 @@ function verificar_nome() {
         } else {document.getElementById("input_num").style.borderColor = "red";}
     }
 
+    function verificar_cep() {
+        var cep = input_cep.value;
+
+        if (cep == "") {
+            document.getElementById("input_cep").style.borderColor = "black";
+        } else if (num_eVar.length > 1) {
+            document.getElementById("input_cep").style.borderColor = "green";
+        } else {document.getElementById("input_cep").style.borderColor = "red";}
+    }
+
     function verificar_senha(){
         var senha = input_senha.value;
         confirmar_senha()
@@ -167,7 +153,7 @@ function verificar_nome() {
         // Agora vá para o método fetch logo abaixo
         var  nome = input_nome.value;
         var  num = input_num.value;
-        /*var  cep = input_cep.value;*/
+        var  cep = input_cep.value;
         var  email = input_email.value;
         var  senha = input_senha.value;
         var  senha_confirm = input_senha_confirmacao.value;
@@ -202,58 +188,86 @@ function verificar_nome() {
 
             console.log("resposta: ", resposta);
             /*console.log(resposta.json())*/
-            resposta.json().then(function(json){ 
-              console.log(json);
+            // resposta.json().then(function(json){
+            //   console.log(json);
+            // });
+
+            if (resposta.ok) {
+                fetch("/usuarios/autenticar", {
+                  method: "POST",
+                  headers: {
+                      "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify({
+                      emailServer: email,
+                      senhaServer: senha
+                  })
+            }).then(function (resposta) {
+
+              resposta.json().then(json => {
+                  console.log(json);
+                  console.log(JSON.stringify(json));
+
+                  if (resposta.ok) {
+                      fetch("/usuarios/cadastrar_endereco", {
+                      method: "POST",
+                      headers: {
+                      "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify({
+                      // crie um atributo que recebe o valor recuperado aqui
+                      // Agora vá para o arquivo routes/usuario.js
+                      numeroServer: num,
+                      cepServer: cep,
+                      idUsuarioServer: json.idUsuario
+                  })
+                  }).then(function (resposta) {
+
+                  console.log("resposta: ", resposta);
+
+
+                  if (resposta.ok) {
+                      setTimeout(() => {
+                          window.location = "login.html";
+                      })
+
+
+                  } else {
+                      throw ("Houve um erro ao tentar realizar o cadastro!");
+                  }
+                  }).catch(function (resposta) {
+                  console.log(`#ERRO: ${resposta}`);
+
+                  });
+                  return false;
+
+                  } else {
+                      throw ("Houve um erro ao tentar realizar o cadastro!");
+                  }
+
+              });
+
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+
             });
+          } else {
+              throw ("Houve um erro ao tentar realizar o cadastro!");
+          }
 
-
-            if (resposta.ok) {
-                fetch("/usuarios/cadastrar_endereco", {
-                method: "POST",
-                headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
-                numeroServer: num,
-                cepServer: "04169000"
-            })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-            
-
-            if (resposta.ok) {
-                setTimeout(() => {
-                    window.location = "login.html";
-                })
-                
-                
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            
-        });
-        return false;     
-                
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            
+
         });
         return false;
         }
 
-        
-        
+
+
  }
 </script>
 
 </html>
+
 
 

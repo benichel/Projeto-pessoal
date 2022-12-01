@@ -201,6 +201,11 @@ main{
   align-content: flex-start;
 }
 
+.motivo-fin{
+  padding: 30px;
+  height: 200px;
+}
+
 .descricao_perfil img{
   padding: 30px;
   height: 300px;
