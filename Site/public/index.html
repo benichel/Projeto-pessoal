@@ -10,8 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/style_inicio.css"/>
     <link rel="stylesheet" type="text/css" href="./css/style"/>
     
-    <title>Bolsa de Valores</title>
-    <script src="../js/carrossel.js"></script>
+    <title>My profile</title>
     <script src="../js/script.js"></script>
     <script src="login.js"></script>
     <script src="../js/cadastro.js"></script>
@@ -21,13 +20,13 @@
     <header>
       <div class="header-bolsa_valores">
           <div class="logo_bolsa_valores">
-              <p class="logo_bolsa_valores">Bolsa de Valores</p>
+              <p class="logo_bolsa_valores">My Profile</p>
           </div>
           <nav>
               <ul>
-                  <li><a href="./index.html">Início</a></li>
-                  <li><a href="./index.html">Educação Financeira</a></li>
-                  <li><a href="./index.html">Sobre mim</a></li>
+                  <li><a href="#topo">Início</a></li>
+                  <li><a href="#edu_fin">Educação Financeira</a></li>
+                  <li><a href="#sobre_meu_perfil">Sobre mim</a></li>
               </ul>
           </nav>
           <div class="login-cadastro">
@@ -43,14 +42,14 @@
   </header>
     <!-- tela inicial (frase + imagem)-->
     <main>
-      <section class="banner">
+      <section id="topo"class="banner">
         
        <div class="principal_banner">
         <div class="conteudo_banner">
           <h2 class="descricao_banner">Saiba qual o seu perfil de investidor</h2>
           <br/>
           <p class="texto_banner">Você sabia que existem três perfís de um investidor? Saiba qual é o seu!.</p><br>
-          <button class = "botao_banner" onclick="botao_banner()">Agora</button>
+          <button class = "botao_banner" onclick="botao_banner()"><a href="#sobre_meu_perfil">Agora</a></button> 
         </div>
       
         <div class="imagem_banner">
@@ -60,7 +59,7 @@
       </section>
     
     <!--tela sobre educaçao financeira-->
-      <section class="edu_fin">
+      <section id="edu_fin" class="edu_fin">
         <div class="texto_edu_fin">
             <div class="titulo_investir">
               <h2>Educação Financeira?</h2>
@@ -70,39 +69,39 @@
       <div class="cards">
               <div class="primeiro_motivo">
                 <img class="motivo-fin" src="./assets/icon/motivo-fin-01.png" alt="">
-                <h2 class="topico_motivo">Você se conhece melhor</h2>
+                <h2 class="topico_motivo">Você realiza seus planos</h2>
                 <br/>
-                <p class="texto_motivo">o negócio não é só ganhar dinheiro. Você precisa gastá-lo corretamente também. Porque não adianta nada ganhar muito se você gastar muito. Isso em todas as escalas. Tem gente que acha que ganhando muito dinheiro terá os problemas resolvidos, mas eles não estarão resolvidos..</p>
+                <p class="texto_motivo">A questão dificilmente está na falta de tempo,<br> e sim na falta de <b>prioridade</b><br>
+                  Planejar faz você chegar mais longe, proporciona mais foco e melhora a performance.</p>
               </div>
 
               <div class="segundo_motivo">
                 <img class="motivo-fin"src="./assets/icon/motivo-fin-02.png" alt="">
                 <h2 class="topico_motivo">Mudança de hábitos</h2>
                 <br/>
-                <p class="texto_motivo">E o fato de você não precisar se preocupar com o dinheiro te faz poder olhar para outras coisas ao redor.</p>
+                <p class="texto_motivo">E quem planta valor colhe resultado. Quem planta <b>bons hábitos</b> colhe sucesso. Quem entende e respeita os horizontes do tempo colhe <b>prosperidade</b>.</p>
               </div>
 
               <div class="terceiro_motivo">
                 <img class="motivo-fin" src="./assets/icon/motivo-fin-03.png" alt="">
-                <h2 class="topico_motivo">Você realiza seus planos</h2>
+                <h2 class="topico_motivo">Você se conhece melhor</h2>
                 <br/>
-                <p class="texto_motivo">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <p class="texto_motivo">A perda de dinheiro está por não seguir o princípio de que <b>ganância</b>, <b>medo</b> e <b>impaciência</b> geram prejuízos. Enquanto uns choram, outros vendem lenços. De que lado você prefere estar?</p>
               </div>
         </div>
         <div class="botao_cards">
-          <button class ="botao_edu_fin"onclick="botao_edu_fin()">Simule aqui</button>
+          <button class ="botao_edu_fin"onclick="botao_edu_fin()"><a href="./cadastro.html">Simule aqui</a></button> 
         </div>
       </section>
    
       <!-- pagina sobre -->
-      <section class="sobre_meu_perfil">
+      <section id="sobre_meu_perfil" class="sobre_meu_perfil">
         <div class="descricao_perfil">
-          <img class="img_perfil" src="../public/assets/icon/perfil.png" alt="meu perfil">
-          <h2 class="sobre_mim">Sobre mim</h2><br>
-          <p class="texto_sobre_mim">Me chamo Giovanna Benichel, 23 anos, estudante de ADS, criadora do site, bla bla bla</p>
-          <!-- meus dados e minha imagem -->
+          <img class="img_perfil" src="./assets/icon/meus_valores (1).jpg" alt="meu perfil">
         </div>
 
+
+        <div class="todo_carrossel">
         <div class="primeira_caracteristica">
         <div class="primeiro_carrossel">
           <!-- tres motivos do porque esse site me representa -->
@@ -156,30 +155,31 @@
       </div>
 
       <div class="terceira_caracteristica">
-        <div class="primeiro_carrossel">
+        <div class="terceiro_carrossel">
           <!-- tres motivos do porque esse site me representa -->
-          <div data-js="carousel__item" class="carousel__item carousel__item--visible">
+          <div data-js="terceiro_carousel__item" class="terceiro_carousel__item terceiro_carousel__item--visible">
             <h4>Altruísmo</h4>
             <p class="texto_primeiro_motivo">Não é sobre mim. É sobre o outro. Estou disposta a fazer o melhor para facilitar a vida das pessoas.</p>
           </div>
 
-          <div data-js="carousel__item" class="carousel__item">
+          <div data-js="terceiro_carousel__item" class="terceiro_carousel__item">
               <h4>Finanças</h4>
               <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira solida e segura para o futuro.</p>
           </div>
 
-          <div class="carousel__actions">
-            <button data-js="carousel__button--prev" aria-label="Slide anterior">
+          <div class="terceiro_carousel__actions">
+            <button data-js="terceiro_carousel__button--prev" aria-label="Slide anterior">
               <
             </button>
       
-            <button data-js="carousel__button--next" aria-label="Próximo slide">
+            <button data-js="terceiro_carousel__button--next" aria-label="Próximo slide">
               >
             </button>
           </div>
 
         </div>
       </div>
+    </div>
 
         </div>
       </section>
@@ -188,7 +188,7 @@
     <footer class="footer">
       
       <div class="imagem_footer">
-      <img class="img_logo"src="..//public/assets/icon/logo_oficial" alt="logo do meu site" />
+       <a href="#edu_fin"><img class="img_logo"src="./assets/icon/logo_oficial.png" alt="logo do meu site" /></a>
       </div>
       <h4 class="texto_footer">Desenvolvido por @ben, aluna SPTECH &copy; 2022</h4>
       <div class="botão_direcionamento">
@@ -197,38 +197,5 @@
     </footer>
   </body>
 </html>
+<script src="./js/carrossel.js"></script>
 
-<script> 
-const slides = document.querySelectorAll('[data-js="carousel__item"]')
-const nextButton = document.querySelector('[data-js="carousel__button--next"]')
-const prevButton = document.querySelector('[data-js="carousel__button--prev"]')
-var currentSlideIndex = 0;
-
-nextButton.addEventListener('click', () => {
-    if(currentSlideIndex === slides.length - 1){
-        currentSlideIndex = 0;
-    }else {
-        currentSlideIndex++
-    }
-    
-    console.log('oi')
-    
-    slides.forEach(slide =>{
-    slide.classList.remove('carousel__item--visible')
-    })
-    slides[currentSlideIndex].classList.add('carousel__item--visible')
-})
-
-prevButton.addEventListener('click', () => {
-if(currentSlideIndex === 0){
-    currentSlideIndex = slides.length - 1
-}else{
-    currentSlideIndex--
-}
-    
-    slides.forEach(slide => {
-        slide.classList.remove('carousel__item--visible')
-    })
-    slides[currentSlideIndex].classList.add('carousel__item--visible')
-})
-</script>

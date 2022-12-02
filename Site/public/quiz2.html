@@ -5,77 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="shortcut icon" href="./assets/icon/seguro.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/quiz2.css">
-    <script src="./js/quiz2.js"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
   </head>
 
 <body>
-  <div class="container">	
-    <div class="row">
-  	  <div class="two-thirds column">
+  <div class="menu-quiz">
+      <div class="Logo">
+          <img src="./assets/icon/logo_oficial.png" alt="Logo" width="130px" height="55px"/>
+      </div>
+
+      <div class="principal-menu">
+          <div class="perfil-item-menu">
+              Bem vindo <span id="b_usuario"></span>!
+          </div>
+      </div>
+      <div class="importante-menu">
+          <div class="ranking-item-menu">
+              <a href="./dashboard/dashboard.html">
+                  <!-- <img src="" alt="Item Sair do menu" width="25px"> -->
+                  <p>Ranking</p>
+              </a>
+          </div>
+          <div class="sair-item-menu">
+              <a href="../index.html">
+                  <!-- <img src="" alt="Item Sair do menu" width="25px"> -->
+                  <p>Sair</p>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="container">
+    <div class="linha">
+  	  <div class="titulo coluna">
         <h2>Descubra o seu perfil</h2>
 
-        <div id="progress_bar"></div>
-  	  	<form class="questions_box">
+        <div id="barra_progresso"></div>
+  	  	<form class="caixa_perguntas">
 
-  	  		<div id="question-1">
+  	  		<div id="pergunta_1">
   	  		  <h2>1º round</h2>
   	  			<h3>Sobre mudanças</h3>
-  	  			<input id="question-1-answer-a" type="radio" name="favelang" value=1> Adora mudanças e se motiva quando aparece novos desafios.<br>
-  				  <input id="question-1-answer-b" type="radio" name="favelang" value=2> Mudar é complicado, a menos que explique passo a passo de como será a mudança.<br>
-  				  <input id="question-1-answer-c" type="radio" name="favelang" value=3> Se considera detalhista, organizado e analítico e segue a risca qualquer tarefa para não cometer erros.<br>
-  				  <div id="submit1" class="button">Próxima</div>
-            <div class="clearfix"></div>
+  	  			<input id="pergunta_1_resposta_a" type="radio" value="arrojado"> Adora mudanças e se motiva quando aparece novos desafios.<br>
+  				  <input id="pergunta_1_resposta_b" type="radio" value="moderado"> Mudar é complicado, a menos que explique passo a passo de como será a mudança.<br>
+  				  <input id="pergunta_1_resposta_c" type="radio" value="conservador"> Se considera detalhista, organizado e analítico e segue a risca qualquer tarefa para não cometer erros.<br>
+  				  <div id="enviar_1" class="botao">Próxima</div>
   			  </div>
 
-  			 <div id="question-2">
+  			 <div id="pergunta_2">
   				 <h2>2º round</h2>
   				 <h3>Sobre decisões</h3>
-  	  		 <input id="question-2-answer-a" type="radio" name="favelang" value="1">Ouve todos os lados da moeda, pois gosta de tomar a decisão mais segura para ele e os amigos.<br>
-  				 <input id="question-2-answer-b" type="radio" name="favelang" value="2"> Não é indeciso e toma decisões rápidas mesmo que o resultado seja negativo.<br>
-  				 <input id="question-2-answer-c" type="radio" name="favelang" value="3"> Não fala muito, mas quando fala as pessoas prestam atenção porque costumam ser muito assertivos.<br>
-  				 <div id="submit2" class="button">Próxima</div>
-           <div class="clearfix"></div>
-  			 </div>
-  			
-  			 <div id="question-3">	
-  				 <h2>3º round</h2>
-  				 <h3>Sobre conflitos</h3>
-  	  		 <input id="question-3-answer-a" type="radio" name="favelang" value="1">Detesta se envolver em conflitos, por isso tenta mediar quando vê um.<br>
-  				 <input id="question-3-answer-b" type="radio" name="favelang" value="2"> Se sente muito mal quando criticam seu trabalho.<br>
-  				 <input id="question-3-answer-c" type="radio" name="favelang" value="3"> Não tem problemas em perder hoje, porque sabe que vai ganhar amanhã.<br>
-  				 <div id="submit3" class="button">Próxima</div>
-           <div class="clearfix"></div>
+  	  		 <input id="pergunta_2_resposta_a" type="radio" value="moderado">Ouve todos os lados da moeda, pois gosta de tomar a decisão mais segura para ele e os amigos.<br>
+  				 <input id="pergunta_2_resposta_b" type="radio" value="arrojado"> Não é indeciso e toma decisões rápidas mesmo que o resultado seja negativo.<br>
+  				 <input id="pergunta_2_resposta_c" type="radio" value="conservador"> Não fala muito, mas quando fala as pessoas prestam atenção porque costumam ser muito assertivos.<br>
+  				 <div id="enviar_2" class="botao">Próxima</div>
   			 </div>
 
-         <div id="question-4">
+  			 <div id="pergunta_3">
+  				 <h2>3º round</h2>
+  				 <h3>Sobre conflitos</h3>
+  	  		 <input id="pergunta_3_resposta_a" type="radio" value="moderado">Detesta se envolver em conflitos, por isso tenta mediar quando vê um.<br>
+  				 <input id="pergunta_3_resposta_b" type="radio" value="conservador"> Se sente muito mal quando criticam seu trabalho.<br>
+  				 <input id="pergunta_3_resposta_c" type="radio" value="arrojado"> Não tem problemas em perder hoje, porque sabe que vai ganhar amanhã.<br>
+  				 <div id="enviar_3" class="botao">Próxima</div>
+  			 </div>
+
+         <div id="pergunta_4">
             <h2>4º round</h2>
             <h3>Sobre conquistas</h3>
-            <input id="question-4-answer-a" type="radio" name="favelang" value="1"> É seletivo e tem poucos amigos, pois os que tem são de confiança.<br>
-            <input id="question-4-answer-b" type="radio" name="favelang" value="2"> Se considera competitivo, obstinado e determinado quando quer conquistar algo ou alguém.<br>
-            <input id="question-4-answer-c" type="radio" name="favelang" value="3"> Detesta contato físico, mas consegue manter uma boa relação com as pessoas.<br>
-            <div id="submit4" class="button">Próxima</div>
-            <div class="clearfix"></div>
+            <input id="pergunta_4_resposta_a" type="radio" value="moderado"> É seletivo e tem poucos amigos, pois os que tem são de confiança.<br>
+            <input id="pergunta_4_resposta_b" type="radio" value="arrojado"> Se considera competitivo, obstinado e determinado quando quer conquistar algo ou alguém.<br>
+            <input id="pergunta_4_resposta_c" type="radio" value="conservador"> Detesta contato físico, mas consegue manter uma boa relação com as pessoas.<br>
+            <div id="enviar_4" class="botao">Próxima</div>
           </div>
 
 
-         <div id="question-6"> 
+         <div id="pergunta_5">
            <h2>Obrigado por responder a pesquisa!</h2>
            <h3>Seu perfil de investidor é: </h3>
-           <h1 id=printtotalscore></h1>
-           <p id=printscoreinfo></p>
-
+           <h2 id=seu_resultado></h2>
          </div>
 
 
-  				
+
   	  	</form>
 
   	  </div>
   	</div>
   </div>
 
-  
+<script src="./js/quiz2.js"></script>
 </body>
 </html>

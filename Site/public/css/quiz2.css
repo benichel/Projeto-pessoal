@@ -1,87 +1,97 @@
 .container {
     position: relative;
     width: 100%;
-  
+
     max-width: 1024px;
     margin: 0 auto;
     padding: 0 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
   .column {
     margin-bottom: 1.5rem;
     width: 100%;
     float: left;
-    box-sizing: border-box; 
+    box-sizing: border-box;
   }
-  
+
   @media (min-width: 640px) {
     .container {
       width: 90%;
       padding: 0; }
-    .column {
+    .coluna {
       margin-left: 4%; }
-    .column:first-child {
+    .coluna:first-child {
       margin-left: 0; }
-  
-    .full-width.column              { width: 100%; margin-left: 0; }  
-  
-    .one-half.column                { width: 48%; }
-  
-    .one-third.column               { width: 30.6666666667%; }
-    .two-thirds.column              { width: 65.3333333333%; }
-  
-    .one-quarter.column             { width: 22%; }
-    .two-quarter.column             { width: 48%; }
-    .three-quarter.column           { width: 74%; }
-  
-    .one-half.column                { width: 48%; }
-  
-              
-  
+
+    .full-width.coluna              { width: 100%; margin-left: 0; }
+
+    .one-half.coluna                { width: 48%; }
+
+    .one-third.coluna               { width: 30.6666666667%; }
+    .titulo.coluna              { width: 65.3333333333%; padding-top: 50px; }
+
+    .one-quarter.coluna             { width: 22%; }
+    .two-quarter.coluna             { width: 48%; }
+    .three-quarter.coluna           { width: 74%; }
+
+    .one-half.coluna                { width: 48%; }
+
+
+
   }
-  
+
   .container:after,
-  .row:after,
+  .linha:after,
   .clearfix {
     content: "";
     display: table;
     clear: both; }
-  
-  
+
+* {
+    box-sizing: border-box;
+}
+
   body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: #5EC57E;
     background-color: #f1f1f1;
     margin: 0;
+
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: #D9D9D9;
   }
-  
+
   h1, h2, h3 {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #04112B;
     margin-top: 0;
   }
-  
+
   h1 {
     font-size: 54px;
   }
-  
+
   h2 {
     font-size: 36px;
   }
-  
+
   h3 {
     color: #04112B;
     font-size: 26px;
   }
-  
-  
-  
+
+
+
   .center {
     text-align: center;
   }
-  
-  .questions_box {
+
+  .caixa_perguntas {
     display: flex;
     padding: 60px;
     text-align: left;
@@ -92,13 +102,13 @@
     /* justify-content: center; */
     /* align-items: baseline;*/
   }
-  
-  .button {
+
+  .botao {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 10px 0 0 0;
     /*float: right;*/
     cursor: pointer;
-  
+
     font-size: 1em;
     border: none;
     padding: 10px 15px;
@@ -118,19 +128,73 @@
     -o-transition: background-color 200ms ease-in-out;
     transition: background-color 200ms ease-in-out;
   }
-  
-  .button:hover {
+
+  .botao:hover {
     background-color: #5EC57E !important;
     color: #04112B;
   }
-  
-  #question-2, #question-3, #question-4, #question-6 {
+
+  #pergunta_2, #pergunta_3, #pergunta_4, #pergunta_5 {
     display: none;
   }
-  
-  #progress_bar {
+
+  #barra_progresso {
     background-color: #04112B;
     width: 20%;
     height: 10px;
     transition: all 100ms ease-in-out;
+  }
+
+  .menu-quiz{
+      display: flex;
+      flex-direction: column;
+      border-right: 4px solid #04112B;
+      background-color: #344D67;
+      height: 100%;
+      width: 20%;
+      padding: 2% 4%;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      color: #03FA6E;
+  }
+
+  .menu-quiz a{
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #03FA6E;
+  }
+
+  .principal-menu{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 85%;
+      color: #04112B;
+      font-size: 20px;
+  }
+
+  .importante-menu{
+      height: 15%;
+  }
+
+  .principal-menu a{
+      margin-top: 50px;
+  }
+
+  .importante-menu a{
+      margin-top: 10px;
+  }
+
+  .principal-menu a p:hover{
+      border-bottom: 2px solid white;
+      font-weight: bold;
+  }
+
+  .sair-item-menu a p:hover{
+      border-bottom: 2px solid #03FA6E;
+      font-weight: bold;
+  }
+
+  .importante-menu a p:hover{
+      font-weight: bold;
   }

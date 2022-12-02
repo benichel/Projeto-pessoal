@@ -109,23 +109,25 @@ main{
 }
 
 .cards{
-  /* width: 100%; */
+  width: 99%;
   background-color: #344D67;
-  margin: 2.5rem 0;
+  /* margin: 2.5rem 0; */
   padding-left: 16rem;
   padding-right: 16rem;
   display: flex;
   /* justify-content: space-evenly; */
-  flex-wrap: nowrap;
+  flex-wrap: rap;
   /* align-content: flex-start; */
   align-items: center;
 }
+
+
 
 .primeiro_motivo, .segundo_motivo, .terceiro_motivo{
   width: 100%;
   background-color: #344D67;
   margin: 0rem 0;
-  padding: 4rem;
+  padding: 2rem;
   border-radius: 20px;
 }
 
@@ -141,8 +143,8 @@ main{
 /*cuidar quando for escrever algo pq a passing vai comer o seu textinho*/
 /*se tiver com muita margin a caixa vai ficar muito pequena*/
 .texto_motivo {
-  margin-right: 20px;
-  margin-left: 20px;
+  /*margin-right: 20px;
+  margin-left: 20px;*/
   background-color: #5EC57E;
   padding: 2.5rem;
   border-radius: 20px;
@@ -207,8 +209,7 @@ main{
 }
 
 .descricao_perfil img{
-  padding: 30px;
-  height: 300px;
+  height: 405px;
   margin: auto;
 }
 
@@ -257,9 +258,13 @@ main{
   flex-wrap: wrap;
   width: 100%;
   background-color: #344D67;
-  margin: 0rem 0;
+  margin: 10px;
   padding: 40px;
   border-radius: 20px;
+}
+
+.segunda_caracteristica{
+  height: 200px ;
 }
 .primeira_caracteristica h2, .segunda_caracteristica h2, .terceira_caracteristica h2{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -313,11 +318,23 @@ footer{
   height: 100px;
 }
 
+.img_logo{
+  height: 50px;
+}
+
 
 
 
 
 /*css do carrossel*/
+
+.todo_carrossel{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+}
+
 .primeiro_carrossel, .segundo_carrossel, .terceiro_carrossel {
   overflow: hidden;
   max-width: 600px;
@@ -375,13 +392,15 @@ footer{
 .primeiro_carrossel .carousel__actions button[data-js="carousel__button--prev"],
 .segundo_carrossel .segundo_carousel__actions button[data-js="segundo_carousel__button--prev"],
 .terceiro_carrossel .terceiro_carousel__actions button[data-js="terceiro_carousel__button--prev"] {
-  margin-left: 20px;
+  margin-left: 5px;
+
 }
 
 .primeiro_carrossel .carousel__actions button[data-js="carousel__button--next"],
 .segundo_carrossel .segundo_carousel__actions button[data-js="segundo_carousel__button--next"],
 .terceiro_carrossel .terceiro_carousel__actions button[data-js="terceiro_carousel__button--next"] {
-  margin-right: 20px;
+  margin-right: 5px;
+  
 }
 
 @keyframes fadeVisibility {

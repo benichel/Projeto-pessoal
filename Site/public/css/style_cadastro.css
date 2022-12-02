@@ -52,7 +52,7 @@ header {
     font-size: 14px;
 }
 
-.voltar a:hover {
+.header_menu a:hover {
     border-bottom: 4px solid #9688F2;
     font-weight: bold;
 }
@@ -91,9 +91,9 @@ header{
 }
 .imagem_banner{
     display: flex;
-    padding: 30px;
-    height: 300px;
-    width: 100%;
+    padding: 25px;
+    height: 308px;
+    width: 40%;
 }
 
 .div_inputs{

@@ -8,7 +8,13 @@ const segundo_slides = document.querySelectorAll('[data-js="segundo_carousel__it
 const segundo_nextButton = document.querySelector('[data-js="segundo_carousel__button--next"]')
 const segundo_prevButton = document.querySelector('[data-js="segundo_carousel__button--prev"]')
 var segundo_currentSlideIndex = 0;
-console.log('slide2',segundo_slides)
+
+const terceiro_slides = document.querySelectorAll('[data-js="terceiro_carousel__item"]')
+const terceiro_nextButton = document.querySelector('[data-js="terceiro_carousel__button--next"]')
+const terceiro_prevButton = document.querySelector('[data-js="terceiro_carousel__button--prev"]')
+var terceiro_currentSlideIndex = 0;
+
+
 
 nextButton.addEventListener('click', () => {
     if(currentSlideIndex === slides.length - 1){
@@ -66,4 +72,32 @@ if(segundo_currentSlideIndex === 0){
         slide.classList.remove('segundo_carousel__item--visible')
     })
     segundo_slides[segundo_currentSlideIndex].classList.add('segundo_carousel__item--visible')
+})
+
+terceiro_nextButton.addEventListener('click', () => {
+    if(terceiro_currentSlideIndex === terceiro_slides.length - 1){
+        terceiro_currentSlideIndex = 0;
+    }else {
+        terceiro_currentSlideIndex++
+    }
+    
+    console.log('oi')
+
+    terceiro_slides.forEach(slide =>{
+    slide.classList.remove('terceiro_carousel__item--visible')
+    })
+    terceiro_slides[terceiro_currentSlideIndex].classList.add('terceiro_carousel__item--visible')
+})
+
+terceiro_prevButton.addEventListener('click', () => {
+if(terceiro_currentSlideIndex === 0){
+    terceiro_currentSlideIndex = terceiro_slides.length - 1
+}else{
+    terceiro_currentSlideIndex--
+}
+    
+terceiro_slides.forEach(slide => {
+        slide.classList.remove('terceiro_carousel__item--visible')
+    })
+    terceiro_slides[terceiro_currentSlideIndex].classList.add('terceiro_carousel__item--visible')
 })
