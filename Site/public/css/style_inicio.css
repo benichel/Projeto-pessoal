@@ -318,29 +318,39 @@ footer{
 
 
 /*css do carrossel*/
-.carousel {
+.primeiro_carrossel, .segundo_carrossel, .terceiro_carrossel {
   overflow: hidden;
   max-width: 600px;
   position: relative;
 }
 
-.carousel .carousel__item,
-.carousel .carousel__item--hidden {
+.primeiro_carrossel .carousel__item,
+.primeiro_carrossel .carousel__item--hidden,
+.segundo_carrossel .segundo_carousel__item,
+.segundo_carrossel .segundo_carousel__item--hidden,
+.terceiro_carrossel .terceiro_carousel__item,
+.terceiro_carrossel .terceiro_carousel__item--hidden {
   display: none;
 }
 
-.carousel .carousel__item img {
+.primeiro_carrossel .carousel__item img,
+.segundo_carrossel .segundo_carousel__item img,
+.terceiro_carrossel .terceiro_carousel__item img {
   width: 100%;
   max-width: 600px;
   height: auto;
 }
 
-.carousel .carousel__item--visible {
+.primeiro_carrossel .carousel__item--visible,
+.segundo_carrossel .segundo_carousel__item--visible,
+.terceiro_carrossel .terceiro_carousel__item--visible {
   display: block;
   animation: fadeVisibility 0.5s;
 }
 
-.carousel .carousel__actions {
+.primeiro_carrossel .carousel__actions,
+.segundo_carrossel .segundo_carousel__actions,
+.terceiro_carrossel .terceiro_carousel__actions {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -349,7 +359,9 @@ footer{
   transform: translateY(-50%);
 }
 
-.carousel .carousel__actions button {
+.primeiro_carrossel .carousel__actions button,
+.segundo_carrossel .segundo_carousel__actions button,
+.terceiro_carrossel .terceiro_carousel__actions button {
   border-radius: 50px;
   border: 0;
   font-weight: bold;
@@ -360,11 +372,15 @@ footer{
   background-color: #242424;
 }
 
-.carousel .carousel__actions button[data-js="carousel__button--prev"] {
+.primeiro_carrossel .carousel__actions button[data-js="carousel__button--prev"],
+.segundo_carrossel .segundo_carousel__actions button[data-js="segundo_carousel__button--prev"],
+.terceiro_carrossel .terceiro_carousel__actions button[data-js="terceiro_carousel__button--prev"] {
   margin-left: 20px;
 }
 
-.carousel .carousel__actions button[data-js="carousel__button--next"] {
+.primeiro_carrossel .carousel__actions button[data-js="carousel__button--next"],
+.segundo_carrossel .segundo_carousel__actions button[data-js="segundo_carousel__button--next"],
+.terceiro_carrossel .terceiro_carousel__actions button[data-js="terceiro_carousel__button--next"] {
   margin-right: 20px;
 }
 

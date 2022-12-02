@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="./css/style_nav.css"/>
     <link rel="stylesheet" type="text/css" href="./css/style_inicio.css"/>
     <link rel="stylesheet" type="text/css" href="./css/style"/>
+    
     <title>Bolsa de Valores</title>
+    <script src="../js/carrossel.js"></script>
     <script src="../js/script.js"></script>
     <script src="login.js"></script>
     <script src="../js/cadastro.js"></script>
@@ -101,47 +103,84 @@
           <!-- meus dados e minha imagem -->
         </div>
 
-        <div class="caracteristicas_perfil">
+        <div class="primeira_caracteristica">
+        <div class="primeiro_carrossel">
           <!-- tres motivos do porque esse site me representa -->
-          <div class="primeira_caracteristica">
-            <h2 class="primeiro_motivo">Motivo 01</h2>
-            <br />
-            <div>
+          <div data-js="carousel__item" class="carousel__item carousel__item--visible">
             <h4>Disciplina</h4>
             <p class="texto_primeiro_motivo">Disposta a fazer o melhor nas condições que tenho até que eu tenha melhores condições para fazer melhor ainda.</p>
           </div>
-            <div>
+
+          <div data-js="carousel__item" class="carousel__item">
               <h4>Finanças</h4>
               <p class="texto_primeiro_motivo">Não importa se você começa do baixo, desde que plante suas cementes e faça a sua parte, uma hora você colherá os frutos e prosperará.</p>
-             </div>
           </div>
 
-          <div class="segunda_caracteristica">
-            <h2 class="segundo_motivo">Motivo 02</h2>
-            <br/>
-            <div>
+          <div class="carousel__actions">
+            <button data-js="carousel__button--prev" aria-label="Slide anterior">
+              <
+            </button>
+      
+            <button data-js="carousel__button--next" aria-label="Próximo slide">
+              >
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="segunda_caracteristica">
+        <div class="segundo_carrossel">
+          <!-- tres motivos do porque esse site me representa -->
+          <div data-js="segundo_carousel__item" class="segundo_carousel__item segundo_carousel__item--visible">
             <h4>Ambição</h4>
-            <p class="texto_segundo_motivo">Ter medo não é uma escolha, mas decidir continuar, sim. Então, estou disposta a chegar até o final da corrida e mesmo que eu caia, mesmo que esteja difícil, eu me levanto e continuo. Afinal, o objetivo é chegar até o fim da minha corrida.</p>
-            </div>
-            <div>
+            <p class="texto_primeiro_motivo">Ter medo não é uma escolha, mas decidir continuar, sim. Então, estou disposta a chegar até o final da corrida e mesmo que eu caia, mesmo que esteja difícil, eu me levanto e continuo. Afinal, o objetivo é chegar até o fim da minha corrida.</p>
+          </div>
+
+          <div data-js="segundo_carousel__item" class="segundo_carousel__item">
               <h4>Finanças</h4>
               <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira solida e segura para o futuro</p>
           </div>
-            
+
+          <div class="segundo_carousel__actions">
+            <button data-js="segundo_carousel__button--prev" aria-label="Slide anterior">
+              <
+            </button>
+      
+            <button data-js="segundo_carousel__button--next" aria-label="Próximo slide">
+              >
+            </button>
           </div>
 
-          <div class="terceira_caracteristica">
-            <h2 class="terceiro_motivo">Motivo 03</h2>
-            <br/>
-            <div>
-              <h4>Altruísmo</h4>
-              <p class="texto_segundo_motivo">Não é sobre mim. É sobre o outro. Estou disposta a fazer o melhor para facilitar a vida das pessoas.</p>
-            </div>
-            <div>
+        </div>
+      </div>
+
+      <div class="terceira_caracteristica">
+        <div class="primeiro_carrossel">
+          <!-- tres motivos do porque esse site me representa -->
+          <div data-js="carousel__item" class="carousel__item carousel__item--visible">
+            <h4>Altruísmo</h4>
+            <p class="texto_primeiro_motivo">Não é sobre mim. É sobre o outro. Estou disposta a fazer o melhor para facilitar a vida das pessoas.</p>
+          </div>
+
+          <div data-js="carousel__item" class="carousel__item">
               <h4>Finanças</h4>
               <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira solida e segura para o futuro.</p>
           </div>
+
+          <div class="carousel__actions">
+            <button data-js="carousel__button--prev" aria-label="Slide anterior">
+              <
+            </button>
+      
+            <button data-js="carousel__button--next" aria-label="Próximo slide">
+              >
+            </button>
           </div>
+
+        </div>
+      </div>
+
         </div>
       </section>
   </main>
@@ -158,3 +197,38 @@
     </footer>
   </body>
 </html>
+
+<script> 
+const slides = document.querySelectorAll('[data-js="carousel__item"]')
+const nextButton = document.querySelector('[data-js="carousel__button--next"]')
+const prevButton = document.querySelector('[data-js="carousel__button--prev"]')
+var currentSlideIndex = 0;
+
+nextButton.addEventListener('click', () => {
+    if(currentSlideIndex === slides.length - 1){
+        currentSlideIndex = 0;
+    }else {
+        currentSlideIndex++
+    }
+    
+    console.log('oi')
+    
+    slides.forEach(slide =>{
+    slide.classList.remove('carousel__item--visible')
+    })
+    slides[currentSlideIndex].classList.add('carousel__item--visible')
+})
+
+prevButton.addEventListener('click', () => {
+if(currentSlideIndex === 0){
+    currentSlideIndex = slides.length - 1
+}else{
+    currentSlideIndex--
+}
+    
+    slides.forEach(slide => {
+        slide.classList.remove('carousel__item--visible')
+    })
+    slides[currentSlideIndex].classList.add('carousel__item--visible')
+})
+</script>
