@@ -16,4 +16,8 @@ router.post("/cadastrar_endereco", function (req, res) {
     usuarioController.endereco(req, res);
 });
 
+router.post("/atualizar_usuario_perfil", function (req, res) {
+    usuarioController.atualizar_usuario_perfil(req, res);
+});
+
 module.exports = router;

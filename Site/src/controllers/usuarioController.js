@@ -11,7 +11,7 @@ function entrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-        
+
         usuarioModel.entrar(email, senha)
             .then(
                 function (resultado) {
@@ -52,7 +52,7 @@ function cadastrar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está undefined!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.cadastrar(nome, email, senha)
             .then(
@@ -84,7 +84,7 @@ function endereco(req, res) {
     } else if (numero == undefined) {
         res.status(400).send("Seu numero está undefined!");
     } else {
-        
+
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.endereco(cep, numero, idUsuario)
             .then(
@@ -104,8 +104,38 @@ function endereco(req, res) {
     }
 }
 
+function atualizar_usuario_perfil(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+    var idPerfil = req.body.idPerfilServer;
+
+    if (idUsuario == undefined) {
+        res.status(400).send("O id do usuario está undefined!");
+    } else if (idPerfil == undefined) {
+        res.status(400).send("O id do perfil está indefinida!");
+    } else {
+
+        usuarioModel.atualizar_usuario_perfil(idUsuario, idPerfil)
+            .then(
+                function (resultado) {
+                    console.log(`\nResultados encontrados: ${resultado.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultado)}`); // transforma JSON em String
+
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log("\nHouve um erro ao realizar a atualização do perfil do usuario! Erro: ", erro.sqlMessage);
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+
+}
+
 module.exports = {
     entrar,
     cadastrar,
-    endereco
+    endereco,
+    atualizar_usuario_perfil
 }
