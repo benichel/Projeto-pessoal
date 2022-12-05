@@ -1,5 +1,6 @@
 b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 var perfil = [];
+var seu_perfil = "";
 
 var pergunta_1 = document.getElementById('pergunta_1');
 var pergunta_2 = document.getElementById('pergunta_2');
@@ -63,8 +64,19 @@ function seu_resultado(){
      tipo_perfil = "moderado";
    }
 
+   definicao_perfil(tipo_perfil);
    atualizar_usuario_perfil(tipo_perfil);
     return total_score;
+}
+
+function definicao_perfil(tipo_perfil) {
+  if (tipo_perfil == "arrojado") {
+    seu_perfil = "Estomago para o risco; mentalidade PNL (programação neurolinguística); perdas em curto prazo necessárias para aproveitar lucros a longo prazo; expectativas que não se concretizam, mas faz parte; renda de maneira expressiva; (Trader, opções binárias, dólar, ouro, Forex, Bitcoin). ";
+  } else if (tipo_perfil == "moderado") {
+    seu_perfil = "Nem oito e nem oitenta; ainda tem uma insegurança, porém tolera um certo grau de risco; patrimônio de tamanho suficiente; risco e retorno equilibrado; maturidade nos investimentos; equilíbrio na mente; retornos acima da média – (ativos de renda variável, fundos imobiliários, ações, Etfs).";
+  } else if (tipo_perfil == "conservador") {
+    seu_perfil = "Segurança em suas aplicações, não quer correr nenhum tipo de risco; prefere investir no tempo para resultados futuros; não fica confortável em perder dinheiro do nada; ganhar pouco, mas ganhar sempre. Objetivo: preservação do patrimônio (idade mais avançada ou iniciantes) – (renda fixa, títulos públicos, CDBs, fundos de investimentos em renda fixa).";
+  }
 }
 
 var enviar_1 = document.getElementById('enviar_1');
@@ -103,6 +115,7 @@ enviar_4.addEventListener('click', function(){
 
 enviar_4.addEventListener('click', function(){
     document.getElementById("seu_resultado").innerHTML = seu_resultado();
+    document.getElementById("seu_perfil").innerHTML = seu_perfil;
 })
 
 function barra_progresso(porcentagem){

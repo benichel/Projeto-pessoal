@@ -106,25 +106,26 @@
         <div class="primeiro_carrossel">
           <!-- tres motivos do porque esse site me representa -->
           <div data-js="carousel__item" class="carousel__item carousel__item--visible">
-            <h4>Disciplina</h4>
-            <p class="texto_primeiro_motivo">Disposta a fazer o melhor nas condições que tenho até que eu tenha melhores condições para fazer melhor ainda.</p>
-          </div>
-
-          <div data-js="carousel__item" class="carousel__item">
-              <h4>Finanças</h4>
-              <p class="texto_primeiro_motivo">Não importa se você começa do baixo, desde que plante suas cementes e faça a sua parte, uma hora você colherá os frutos e prosperará.</p>
-          </div>
-
-          <div class="carousel__actions">
-            <button data-js="carousel__button--prev" aria-label="Slide anterior">
+            <button data-js="carousel__button--prev" class="button_prev" onclick="primeiroNextButton()" aria-label="Slide anterior">
               <
             </button>
-      
-            <button data-js="carousel__button--next" aria-label="Próximo slide">
+            <h4>Disciplina</h4>
+            <p class="texto_primeiro_motivo">Disposta a fazer o melhor nas condições que tenho até que eu tenha melhores condições para fazer melhor ainda.</p>
+            <button data-js="carousel__button--next" class="button_next" onclick="primeiroPrevButton()" aria-label="Próximo slide">
               >
             </button>
           </div>
 
+          <div data-js="carousel__item" class="carousel__item">
+            <button data-js="carousel__button--prev" onclick="primeiroPrevButton()" class="button_prev" aria-label="Slide anterior">
+              <
+            </button>
+              <h4>Finanças</h4>
+              <p class="texto_primeiro_motivo">Não importa se você começa do baixo, desde que plante suas cementes e faça a sua parte, uma hora você colherá os frutos e prosperará.</p>
+              <button data-js="carousel__button--next" onclick="primeiroNextButton()" class="button_next" aria-label="Próximo slide">
+                >
+              </button>
+          </div>
         </div>
       </div>
 
@@ -132,25 +133,26 @@
         <div class="segundo_carrossel">
           <!-- tres motivos do porque esse site me representa -->
           <div data-js="segundo_carousel__item" class="segundo_carousel__item segundo_carousel__item--visible">
-            <h4>Ambição</h4>
-            <p class="texto_primeiro_motivo">Ter medo não é uma escolha, mas decidir continuar, sim. Então, estou disposta a chegar até o final da corrida e mesmo que eu caia, mesmo que esteja difícil, eu me levanto e continuo. Afinal, o objetivo é chegar até o fim da minha corrida.</p>
-          </div>
-
-          <div data-js="segundo_carousel__item" class="segundo_carousel__item">
-              <h4>Finanças</h4>
-              <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira solida e segura para o futuro</p>
-          </div>
-
-          <div class="segundo_carousel__actions">
-            <button data-js="segundo_carousel__button--prev" aria-label="Slide anterior">
+            <button data-js="segundo_carousel__button--prev" onclick="segundoPrevButton()" class="button_prev" aria-label="Slide anterior">
               <
             </button>
-      
-            <button data-js="segundo_carousel__button--next" aria-label="Próximo slide">
+            <h4>Ambição</h4>
+            <p class="texto_primeiro_motivo">Ter medo não é uma escolha, mas decidir continuar, sim. Então, estou disposta a chegar até o final da corrida e mesmo que eu caia, mesmo que esteja difícil, eu me levanto e continuo. Afinal, o objetivo é chegar até o fim da minha corrida.</p>
+            <button data-js="segundo_carousel__button--next" onclick="segundoNextButton()" class="button_prev" aria-label="Próximo slide">
               >
             </button>
           </div>
 
+          <div data-js="segundo_carousel__item" class="segundo_carousel__item">
+            <button data-js="segundo_carousel__button--prev" class="button_prev" onclick="segundoPrevButton()" aria-label="Slide anterior">
+              <
+            </button>
+              <h4>Finanças</h4>
+              <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira solida e segura para o futuro</p>
+              <button data-js="segundo_carousel__button--next" class="button_next" onclick="segundoNextButton()" aria-label="Próximo slide">
+                >
+              </button>
+          </div>
         </div>
       </div>
 
@@ -158,25 +160,26 @@
         <div class="terceiro_carrossel">
           <!-- tres motivos do porque esse site me representa -->
           <div data-js="terceiro_carousel__item" class="terceiro_carousel__item terceiro_carousel__item--visible">
-            <h4>Altruísmo</h4>
-            <p class="texto_primeiro_motivo">Não é sobre mim. É sobre o outro. Estou disposta a fazer o melhor para facilitar a vida das pessoas.</p>
-          </div>
-
-          <div data-js="terceiro_carousel__item" class="terceiro_carousel__item">
-              <h4>Finanças</h4>
-              <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira solida e segura para o futuro.</p>
-          </div>
-
-          <div class="terceiro_carousel__actions">
-            <button data-js="terceiro_carousel__button--prev" aria-label="Slide anterior">
+            <button data-js="terceiro_carousel__button--prev" onclick="terceiroPrevButton()" class="button_prev" aria-label="Slide anterior">
               <
             </button>
-      
-            <button data-js="terceiro_carousel__button--next" aria-label="Próximo slide">
+            <h4>Altruísmo</h4>
+            <p class="texto_primeiro_motivo">Não é sobre mim. É sobre o outro. Estou disposta a fazer o melhor para facilitar a vida das pessoas.</p>
+            <button data-js="terceiro_carousel__button--next" onclick="terceiroNextButton()" class="button_next" aria-label="Próximo slide">
               >
             </button>
           </div>
 
+          <div data-js="terceiro_carousel__item" class="terceiro_carousel__item">
+            <button data-js="terceiro_carousel__button--prev" class="button_prev" onclick="terceiroPrevButton()"  aria-label="Slide anterior">
+              <
+            </button>
+              <h4>Finanças</h4>
+              <p class="texto_primeiro_motivo">Pense no futuro, se não for por você, melhore a vida da sua geração. Deixe um legado sobre educação financeira sólida e segura para o futuro.</p>
+              <button data-js="terceiro_carousel__button--next" class="button_next" onclick="terceiroNextButton()"  aria-label="Próximo slide">
+                >
+              </button>
+          </div>
         </div>
       </div>
     </div>

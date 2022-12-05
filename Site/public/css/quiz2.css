@@ -85,7 +85,13 @@
     font-size: 26px;
   }
 
+.seu_resultado {
+  color: #5EC57E;
+}
 
+.seu_perfil {
+  color: #344D67;
+}
 
   .center {
     text-align: center;

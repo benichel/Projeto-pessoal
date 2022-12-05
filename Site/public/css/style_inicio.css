@@ -1,8 +1,10 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: dashed;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -254,7 +256,6 @@ main{
 .primeira_caracteristica, .segunda_caracteristica,.terceira_caracteristica{
   display: flex;
   padding: 20px;
-  display: flex;
   flex-wrap: wrap;
   width: 100%;
   background-color: #344D67;
@@ -350,6 +351,8 @@ footer{
   display: none;
 }
 
+
+
 .primeiro_carrossel .carousel__item img,
 .segundo_carrossel .segundo_carousel__item img,
 .terceiro_carrossel .terceiro_carousel__item img {
@@ -361,8 +364,9 @@ footer{
 .primeiro_carrossel .carousel__item--visible,
 .segundo_carrossel .segundo_carousel__item--visible,
 .terceiro_carrossel .terceiro_carousel__item--visible {
-  display: block;
+  display: flex;
   animation: fadeVisibility 0.5s;
+  gap: 20px;
 }
 
 .primeiro_carrossel .carousel__actions,
@@ -376,7 +380,18 @@ footer{
   transform: translateY(-50%);
 }
 
-.primeiro_carrossel .carousel__actions button,
+
+.button_prev, .button_next{
+  border-radius: 50px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  color: #FFF;
+  background-color: #344D67;
+}
+/* .primeiro_carrossel .carousel__actions button,
 .segundo_carrossel .segundo_carousel__actions button,
 .terceiro_carrossel .terceiro_carousel__actions button {
   border-radius: 50px;
@@ -387,7 +402,7 @@ footer{
   height: 40px;
   color: #FFF;
   background-color: #242424;
-}
+} */
 
 .primeiro_carrossel .carousel__actions button[data-js="carousel__button--prev"],
 .segundo_carrossel .segundo_carousel__actions button[data-js="segundo_carousel__button--prev"],
@@ -402,6 +417,8 @@ footer{
   margin-right: 5px;
   
 }
+
+
 
 @keyframes fadeVisibility {
   0% {
